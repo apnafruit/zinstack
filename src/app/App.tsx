@@ -7,7 +7,6 @@ import Process from '@/app/components/Process';
 import TechStack from '@/app/components/TechStack';
 import Testimonials from '@/app/components/Testimonials';
 import FinalCTA from '@/app/components/FinalCTA';
-import Footer from '@/app/components/Footer';
 import ScrollToTop from '@/app/components/ScrollToTop';
 import WhatsAppButton from '@/app/components/WhatsAppButton';
 
