@@ -30,7 +30,7 @@ export default function Services() {
   ];
 
   return (
-    <section className="py-24 lg:py-32 px-4 lg:px-12 relative overflow-hidden">
+    <section className="py-24 lg:py-32 px-6 lg:px-12 relative overflow-hidden">
       <img src="/ban3.png" alt="What we do background" className="absolute inset-0 w-full h-full object-cover block" />
       <div className="absolute inset-0 bg-black/35" />
       <div className="max-w-[1440px] mx-auto relative z-10">
@@ -49,8 +49,7 @@ export default function Services() {
           </p>
         </motion.div>
 
-        {/* Force desktop 4-column layout on all sizes */}
-        <div className="grid grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
@@ -61,21 +60,21 @@ export default function Services() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ y: -5 }}
-                className="bg-[#1A1F2C]/50 border border-[#9AA4B2]/10 rounded-xl p-4 sm:p-6 md:p-8 space-y-6 transition-all hover:border-[#3B82F6]/30 hover:shadow-[0_0_30px_rgba(59,130,246,0.1)] cursor-pointer"
+                className="bg-[#1A1F2C]/50 border border-[#9AA4B2]/10 rounded-xl p-8 space-y-6 transition-all hover:border-[#3B82F6]/30 hover:shadow-[0_0_30px_rgba(59,130,246,0.1)] cursor-pointer"
               >
-                <div className="w-12 h-12 rounded-lg bg-[#3B82F6]/10 flex items-center justify-center">
-                  <Icon className="w-6 h-6 text-[#3B82F6]" />
+                <div className="w-14 h-14 rounded-lg bg-[#3B82F6]/10 flex items-center justify-center">
+                  <Icon className="w-7 h-7 text-[#3B82F6]" />
                 </div>
                 
                 <div className="space-y-3">
                   <h3 
-                    className="text-[clamp(13px,2.8vw,18px)]"
+                    className="text-xl"
                     style={{ fontFamily: "'Space Grotesk', sans-serif", fontWeight: 600 }}
                   >
                     {service.title}
                   </h3>
                   <p 
-                    className="text-[#9AA4B2] text-[clamp(12px,2.2vw,14px)] leading-relaxed"
+                    className="text-[#9AA4B2] text-sm leading-relaxed"
                     style={{ fontFamily: "'Inter', sans-serif" }}
                   >
                     {service.description}

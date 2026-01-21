@@ -24,7 +24,7 @@ export default function Portfolio() {
   ];
 
   return (
-    <section className="py-24 lg:py-32 px-4 lg:px-12 overflow-hidden">
+    <section className="py-24 lg:py-32 px-6 lg:px-12">
       <div className="max-w-[1440px] mx-auto">
         {/* Header */}
         <motion.div
@@ -42,8 +42,8 @@ export default function Portfolio() {
           </p>
         </motion.div>
 
-        {/* Grid - force desktop columns on all sizes */}
-        <div className="grid grid-cols-3 gap-6">
+        {/* Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (
             <motion.div
               key={index}
@@ -52,8 +52,8 @@ export default function Portfolio() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className={`group relative overflow-hidden rounded-xl
-                ${index === 0 ? "col-span-2 row-span-2" : ""}
-                ${index === 3 ? "col-span-2" : ""}
+                ${index === 0 ? "md:col-span-2 md:row-span-2" : ""}
+                ${index === 3 ? "lg:col-span-2" : ""}
               `}
             >
               <div className="relative aspect-[4/3] bg-black overflow-hidden">
@@ -66,7 +66,7 @@ export default function Portfolio() {
                     loop
                     playsInline
                     preload="auto"
-                    className="absolute inset-0 w-full h-full object-cover responsive-media"
+                    className="absolute inset-0 w-full h-full object-cover"
                   />
                 )}
 
@@ -74,20 +74,20 @@ export default function Portfolio() {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0B0F14]/85 via-[#0B0F14]/50 to-transparent" />
 
                 {/* Content */}
-                <div className="absolute inset-0 p-6 flex flex-col justify-end">
+                <div className="absolute inset-0 p-8 flex flex-col justify-end">
                   <div className="space-y-2">
                     <div className="flex items-center gap-2">
-                      <span className="text-[clamp(10px,2.2vw,12px)] text-[#3B82F6] uppercase tracking-wider font-semibold">
+                      <span className="text-xs text-[#3B82F6] uppercase tracking-wider font-semibold">
                         {project.category}
                       </span>
                       <ArrowUpRight role="img" aria-label={`${project.category} link`} className="icon-glow w-4 h-4" />
                     </div>
 
-                    <h3 className="text-[clamp(14px,3.2vw,24px)] font-semibold">
+                    <h3 className="text-2xl md:text-3xl font-semibold">
                       {project.title}
                     </h3>
 
-                    <p className="text-[clamp(10px,2.0vw,14px)] text-[#9AA4B2]">
+                    <p className="text-sm text-[#9AA4B2]">
                       {project.result}
                     </p>
                   </div>
