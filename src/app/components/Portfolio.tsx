@@ -47,7 +47,7 @@ export default function Portfolio() {
 
         {/* Mobile carousel (single, larger video) */}
         <div className="md:hidden">
-          <div className="relative w-full aspect-[16/9] bg-black rounded-xl overflow-hidden mb-6">
+          <div className="relative w-full h-[84.375vw] md:h-auto md:aspect-[4/3] bg-black rounded-xl overflow-hidden mb-6">
             {projects[mobileIndex].video && (
               <video
                 src={projects[mobileIndex].video}
@@ -62,17 +62,17 @@ export default function Portfolio() {
 
             <div className="absolute inset-0 bg-gradient-to-t from-[#0B0F14]/85 via-[#0B0F14]/50 to-transparent" />
 
-            <div className="absolute left-4 right-4 bottom-4 flex items-end justify-between">
+                <div className="absolute left-4 right-4 bottom-4 flex items-end justify-between">
               <div className="text-left">
                 <div className="flex items-center gap-2">
                   <span className="text-xs text-[#3B82F6] uppercase tracking-wider font-semibold">
                     {projects[mobileIndex].category}
                   </span>
                 </div>
-                <h3 className="text-sm font-semibold mt-1">
+                <h3 className="text-[10px] font-semibold mt-1">
                   {projects[mobileIndex].title}
                 </h3>
-                <p className="text-xs text-[#9AA4B2] mt-1">
+                <p className="text-[9px] text-[#9AA4B2] mt-1">
                   {projects[mobileIndex].result}
                 </p>
               </div>
