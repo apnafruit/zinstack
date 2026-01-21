@@ -92,14 +92,14 @@ export default function Process() {
                       
                       <h3 
                         className="text-2xl md:text-3xl"
-                        style={{ fontFamily: "'Space Grotesk', sans-serif", fontWeight: 600 }}
+                        style={{ fontFamily: "'sora', sans-serif", fontWeight: 600 }}
                       >
                         {step.title}
                       </h3>
                       
                       <p 
                         className="text-[#9AA4B2] leading-relaxed"
-                        style={{ fontFamily: "'Inter', sans-serif" }}
+                        style={{ fontFamily: "'sora', sans-serif" }}
                       >
                         {step.description}
                       </p>

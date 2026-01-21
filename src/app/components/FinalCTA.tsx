@@ -89,12 +89,6 @@ export default function FinalCTA() {
                 <li>
                   <a href="#" className="text-[#D1D5DB] hover:text-[#EDEFF2] transition-colors">Twitter</a>
                 </li>
-                <li>
-                  <a href="#" className="text-[#D1D5DB] hover:text-[#EDEFF2] transition-colors">LinkedIn</a>
-                </li>
-                <li>
-                  <a href="#" className="text-[#D1D5DB] hover:text-[#EDEFF2] transition-colors">GitHub</a>
-                </li>
               </ul>
             </div>
           </div>

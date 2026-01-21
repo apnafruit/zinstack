@@ -1,7 +1,10 @@
 import { motion } from "motion/react";
-import { ArrowUpRight } from "lucide-react";
+import { useState } from "react";
+import { ArrowUpRight, ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function Portfolio() {
+  const [mobileIndex, setMobileIndex] = useState(0);
+
   const projects = [
     {
       title: "E-commerce Platform",
@@ -42,8 +45,61 @@ export default function Portfolio() {
           </p>
         </motion.div>
 
-        {/* Grid - force desktop columns on all sizes */}
-        <div className="grid grid-cols-3 gap-6">
+        {/* Mobile carousel (single, larger video) */}
+        <div className="md:hidden">
+          <div className="relative w-full aspect-[16/9] bg-black rounded-xl overflow-hidden mb-6">
+            {projects[mobileIndex].video && (
+              <video
+                src={projects[mobileIndex].video}
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="auto"
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+            )}
+
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0B0F14]/85 via-[#0B0F14]/50 to-transparent" />
+
+            <div className="absolute left-4 right-4 bottom-4 flex items-end justify-between">
+              <div className="text-left">
+                <div className="flex items-center gap-2">
+                  <span className="text-xs text-[#3B82F6] uppercase tracking-wider font-semibold">
+                    {projects[mobileIndex].category}
+                  </span>
+                </div>
+                <h3 className="text-sm font-semibold mt-1">
+                  {projects[mobileIndex].title}
+                </h3>
+                <p className="text-xs text-[#9AA4B2] mt-1">
+                  {projects[mobileIndex].result}
+                </p>
+              </div>
+
+              <div className="flex items-center gap-2">
+                <button
+                  onClick={() => setMobileIndex(i => (i - 1 + projects.length) % projects.length)}
+                  aria-label="Previous project"
+                  className="bg-white/10 hover:bg-white/20 text-white w-9 h-9 rounded-full flex items-center justify-center touch-friendly"
+                >
+                  <ChevronLeft className="w-4 h-4" />
+                </button>
+
+                <button
+                  onClick={() => setMobileIndex(i => (i + 1) % projects.length)}
+                  aria-label="Next project"
+                  className="bg-white/10 hover:bg-white/20 text-white w-9 h-9 rounded-full flex items-center justify-center touch-friendly"
+                >
+                  <ChevronRight className="w-4 h-4" />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Grid - desktop/tablet view */}
+        <div className="hidden md:grid grid-cols-3 gap-6">
           {projects.map((project, index) => (
             <motion.div
               key={index}

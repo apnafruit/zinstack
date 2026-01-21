@@ -29,7 +29,7 @@ export default function TechStack() {
   const loopedTech = [...technologies, ...technologies];
 
   return (
-    <section className="py-16 overflow-hidden">
+    <section className="py-8 sm:py-12 overflow-hidden">
 <motion.div
   initial={{ opacity: 0, y: 20 }}
   whileInView={{ opacity: 1, y: 0 }}
@@ -38,7 +38,7 @@ export default function TechStack() {
   className="flex justify-center mb-16"
 >
   <p 
-    className="text-3xl text-white font-bold text-center"
+    className="text-xl sm:text-2xl text-white font-bold text-center"
     style={{ fontFamily: "'sora', sans-serif" }}
   >
     Our Cutting-Edge Tech Stack
@@ -46,7 +46,7 @@ export default function TechStack() {
 </motion.div>
 
       <motion.div
-        className="flex gap-8 w-max px-6"
+        className="flex gap-6 w-max px-4 sm:px-6"
         animate={{ x: ["0%", "-50%"] }}
         transition={{
           duration: 30,
@@ -58,7 +58,7 @@ export default function TechStack() {
           <div
             key={index}
             className={`
-              min-w-[140px] h-[100px]
+              min-w-[110px] sm:min-w-[140px] h-[80px] sm:h-[100px]
               flex items-center justify-center
               bg-[#1A1F2C]/40
               border border-[#9AA4B2]/10
@@ -69,7 +69,7 @@ export default function TechStack() {
               cursor-pointer
             `}
           >
-            <tech.icon role="img" aria-label={tech.name} className="icon-glow h-8 md:h-10" />
+            <tech.icon role="img" aria-label={tech.name} className="icon-glow h-6 md:h-10" />
           </div>
         ))}
       </motion.div>

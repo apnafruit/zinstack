@@ -55,7 +55,7 @@ export default function PremiumTestimonials() {
   const visible = [...testimonials.slice(index), ...testimonials.slice(0, index)].slice(0, 4);
 
   return (
-    <section className="relative py-16 lg:py-24 px-6 lg:px-12 overflow-hidden">
+    <section className="relative py-8 sm:py-12 lg:py-24 px-4 sm:px-6 lg:px-12 overflow-hidden">
       {/* Premium Background Layers */}
       <div className="absolute inset-0">
         {/* Base gradient */}
@@ -80,26 +80,26 @@ export default function PremiumTestimonials() {
             className="space-y-6"
           >
             <div>
-              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold text-white leading-tight">
                 Real results from
                 <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
                   real clients
                 </span>
               </h2>
-              <p className="text-lg text-white/70 mt-4 max-w-lg">
+              <p className="text-base sm:text-lg text-white/70 mt-4 max-w-lg">
                 Discover how top industry leaders achieved exceptional growth through strategic digital transformation
               </p>
             </div>
 
             {/* Stats */}
             <div className="grid grid-cols-2 gap-4 mt-6">
-              <div className="p-5 rounded-2xl bg-gradient-to-br from-white/5 to-white/0 border border-white/10 backdrop-blur-sm">
-                <div className="text-3xl font-bold text-white">98%</div>
+              <div className="p-4 sm:p-5 rounded-2xl bg-gradient-to-br from-white/5 to-white/0 border border-white/10 backdrop-blur-sm">
+                <div className="text-2xl sm:text-3xl font-bold text-white">98%</div>
                 <div className="text-sm text-white/60 mt-1">Client Satisfaction</div>
               </div>
-              <div className="p-5 rounded-2xl bg-gradient-to-br from-white/5 to-white/0 border border-white/10 backdrop-blur-sm">
-                <div className="text-3xl font-bold text-white">2.4x</div>
+              <div className="p-4 sm:p-5 rounded-2xl bg-gradient-to-br from-white/5 to-white/0 border border-white/10 backdrop-blur-sm">
+                <div className="text-2xl sm:text-3xl font-bold text-white">2.4x</div>
                 <div className="text-sm text-white/60 mt-1">Avg. Growth Rate</div>
               </div>
             </div>
@@ -111,7 +111,7 @@ export default function PremiumTestimonials() {
             onMouseEnter={() => setIsHovering(true)}
             onMouseLeave={() => setIsHovering(false)}
           >
-            <div className="relative w-full h-[500px] lg:h-[520px] select-none">
+            <div className="relative w-full h-[360px] sm:h-[420px] lg:h-[520px] select-none">
               <AnimatePresence mode="popLayout">
                 {visible.map((testimonial, i) => {
                   const depthScale = 1 - i * 0.04;
@@ -148,7 +148,7 @@ export default function PremiumTestimonials() {
                         damping: 28,
                         mass: 0.8 
                       }}
-                      className={`absolute inset-x-0 rounded-2xl p-8 lg:p-10 bg-gradient-to-b from-[#0B0F14] to-[#071021] border border-white/6 shadow-2xl`}
+                      className={`absolute inset-x-0 rounded-2xl p-4 sm:p-6 lg:p-10 bg-gradient-to-b from-[#0B0F14] to-[#071021] border border-white/6 shadow-2xl`}
                       aria-hidden={i !== 0}
                       role="article"
                       style={{
@@ -184,12 +184,12 @@ export default function PremiumTestimonials() {
                         </div>
                       </div>
 
-                      <p className="text-[#EDEFF2] leading-relaxed mt-4 lg:mt-6 text-lg lg:text-xl font-light" style={{ fontFamily: "'Inter', sans-serif" }}>
+                      <p className="text-[#EDEFF2] leading-relaxed mt-4 lg:mt-6 text-base md:text-lg lg:text-xl font-light" style={{ fontFamily: "'Inter', sans-serif" }}>
                         "{testimonial.quote}"
                       </p>
 
                       <div className="pt-6 border-t border-white/6 mt-6">
-                        <p className="text-[#EDEFF2] font-semibold text-xl" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
+                        <p className="text-[#EDEFF2] font-semibold text-lg sm:text-xl" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
                           {testimonial.author}
                         </p>
                         <p className="text-sm lg:text-base text-[#9AA4B2] mt-1" style={{ fontFamily: "'Inter', sans-serif" }}>
@@ -201,14 +201,14 @@ export default function PremiumTestimonials() {
                       <div className="hidden lg:flex items-center gap-4 mt-8 pt-6 border-t border-white/10">
                         <button
                           onClick={handlePrev}
-                          className="group flex items-center justify-center w-10 h-10 rounded-full bg-white/5 hover:bg-white/10 transition-all duration-300 border border-white/10 hover:border-white/20"
+                          className="group flex items-center justify-center w-9 h-9 rounded-full bg-white/5 hover:bg-white/10 transition-all duration-300 border border-white/10 hover:border-white/20 touch-friendly"
                           aria-label="Previous testimonial"
                         >
                           <ChevronLeft className="w-4 h-4 text-white group-hover:-translate-x-0.5 transition-transform" />
                         </button>
                         <button
                           onClick={handleNext}
-                          className="group flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 hover:from-cyan-500/30 hover:to-blue-500/30 transition-all duration-300 border border-cyan-500/30 hover:border-cyan-500/50"
+                          className="group flex items-center justify-center w-9 h-9 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 hover:from-cyan-500/30 hover:to-blue-500/30 transition-all duration-300 border border-cyan-500/30 hover:border-cyan-500/50 touch-friendly"
                           aria-label="Next testimonial"
                         >
                           <ChevronRight className="w-4 h-4 text-white group-hover:translate-x-0.5 transition-transform" />
@@ -221,10 +221,10 @@ export default function PremiumTestimonials() {
             </div>
 
             {/* Mobile Navigation Controls */}
-            <div className="flex lg:hidden items-center justify-center gap-4 mt-6">
+            <div className="flex lg:hidden items-center justify-center gap-3 mt-6">
               <button
                 onClick={handlePrev}
-                className="group flex items-center justify-center w-10 h-10 rounded-full bg-white/5 hover:bg-white/10 transition-all duration-300 border border-white/10"
+                className="group flex items-center justify-center w-9 h-9 rounded-full bg-white/5 hover:bg-white/10 transition-all duration-300 border border-white/10 touch-friendly"
                 aria-label="Previous testimonial"
               >
                 <ChevronLeft className="w-4 h-4 text-white group-hover:-translate-x-0.5 transition-transform" />
@@ -245,7 +245,7 @@ export default function PremiumTestimonials() {
               </div>
               <button
                 onClick={handleNext}
-                className="group flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 hover:from-cyan-500/30 hover:to-blue-500/30 transition-all duration-300 border border-cyan-500/30"
+                className="group flex items-center justify-center w-9 h-9 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 hover:from-cyan-500/30 hover:to-blue-500/30 transition-all duration-300 border border-cyan-500/30 touch-friendly"
                 aria-label="Next testimonial"
               >
                 <ChevronRight className="w-4 h-4 text-white group-hover:translate-x-0.5 transition-transform" />
