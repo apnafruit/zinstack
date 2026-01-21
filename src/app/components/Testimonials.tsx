@@ -61,32 +61,6 @@ export default function PremiumTestimonials() {
         {/* Base gradient */}
         <div className="absolute inset-0 bg-gradient-to-br from-[#0A0A0F] via-[#0D0F1A] to-[#0A0A0F]" />
         
-        {/* Animated gradient orbs */}
-        <motion.div 
-          className="absolute top-1/4 -left-20 w-96 h-96 bg-gradient-to-r from-blue-600/10 to-cyan-500/10 rounded-full blur-3xl"
-          animate={{
-            x: [0, 40, 0],
-            y: [0, -20, 0],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-        <motion.div 
-          className="absolute bottom-1/4 -right-20 w-96 h-96 bg-gradient-to-r from-purple-600/10 to-pink-500/10 rounded-full blur-3xl"
-          animate={{
-            x: [0, -40, 0],
-            y: [0, 20, 0],
-          }}
-          transition={{
-            duration: 10,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-        
         {/* Grid overlay */}
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:60px_60px]" />
         

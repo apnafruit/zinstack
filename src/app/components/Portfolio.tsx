@@ -42,8 +42,8 @@ export default function Portfolio() {
           </p>
         </motion.div>
 
-        {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Grid - force desktop columns on all sizes */}
+        <div className="grid grid-cols-3 gap-6">
           {projects.map((project, index) => (
             <motion.div
               key={index}
@@ -52,8 +52,8 @@ export default function Portfolio() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className={`group relative overflow-hidden rounded-xl
-                ${index === 0 ? "md:col-span-2 md:row-span-2" : ""}
-                ${index === 3 ? "lg:col-span-2" : ""}
+                ${index === 0 ? "col-span-2 row-span-2" : ""}
+                ${index === 3 ? "col-span-2" : ""}
               `}
             >
               <div className="relative aspect-[4/3] bg-black overflow-hidden">

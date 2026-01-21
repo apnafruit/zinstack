@@ -30,9 +30,7 @@ export default function Services() {
   ];
 
   return (
-    <section className="py-24 lg:py-32 px-6 lg:px-12 relative overflow-hidden">
-      <img src="/ban3.png" alt="What we do background" className="absolute inset-0 w-full h-full object-cover block" />
-      <div className="absolute inset-0 bg-black/35" />
+    <section className="py-24 lg:py-32 px-6 lg:px-12 relative overflow-hidden bg-black">
       <div className="max-w-[1440px] mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
