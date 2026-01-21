@@ -66,20 +66,9 @@ export default function PremiumTestimonials() {
         
         {/* Shimmer effect */}
         <div className="absolute inset-0 overflow-hidden">
-          <motion.div 
-            className="absolute top-0 left-0 w-32 h-full bg-gradient-to-r from-transparent via-white/5 to-transparent"
-            animate={{
-              x: ['-100%', '400%'],
-            }}
-            transition={{
-              duration: 3,
-              repeat: Infinity,
-              ease: "linear"
-            }}
-          />
         </div>
       </div>
-
+ 
       <div className="max-w-[1440px] mx-auto relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           {/* Left Column - Enhanced Title */}

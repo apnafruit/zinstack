@@ -56,7 +56,7 @@ export default function Portfolio() {
                 ${index === 3 ? "col-span-2" : ""}
               `}
             >
-              <div className="relative aspect-[4/3] bg-black overflow-hidden">
+              <div className="relative aspect-[3/2] md:aspect-[4/3] bg-black overflow-hidden">
                 {/* VIDEO */}
                 {project.video && (
                   <video
@@ -74,7 +74,7 @@ export default function Portfolio() {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0B0F14]/85 via-[#0B0F14]/50 to-transparent" />
 
                 {/* Content */}
-                <div className="absolute inset-0 p-8 flex flex-col justify-end">
+                <div className="absolute inset-0 p-6 md:p-8 flex flex-col justify-end">
                   <div className="space-y-2">
                     <div className="flex items-center gap-2">
                       <span className="text-xs text-[#3B82F6] uppercase tracking-wider font-semibold">
@@ -83,11 +83,11 @@ export default function Portfolio() {
                       <ArrowUpRight role="img" aria-label={`${project.category} link`} className="icon-glow w-4 h-4" />
                     </div>
 
-                    <h3 className="text-2xl md:text-3xl font-semibold">
+                    <h3 className="text-lg md:text-2xl font-semibold">
                       {project.title}
                     </h3>
 
-                    <p className="text-sm text-[#9AA4B2]">
+                    <p className="text-xs md:text-sm text-[#9AA4B2]">
                       {project.result}
                     </p>
                   </div>

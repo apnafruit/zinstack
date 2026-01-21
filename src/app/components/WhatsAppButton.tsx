@@ -14,7 +14,7 @@ export default function WhatsAppButton({ phone = '1234567890' }: { phone?: strin
       rel="noreferrer"
       initial={{ opacity: 0, scale: 0.9 }}
       animate={{ opacity: 1, scale: 1 }}
-      className="fixed bottom-6 right-6 z-50 bg-[#25D366] text-black p-3 rounded-full shadow-lg hover:shadow-[0_0_30px_rgba(37,211,102,0.3)] transition-shadow flex items-center justify-center"
+      className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 bg-[#25D366] text-black p-2 sm:p-3 rounded-full shadow-lg hover:shadow-[0_0_30px_rgba(37,211,102,0.3)] transition-shadow flex items-center justify-center min-w-[44px] min-h-[44px]"
       whileHover={{ scale: 1.05 }}
       aria-label="Chat on WhatsApp"
       title="Chat on WhatsApp"
@@ -23,7 +23,7 @@ export default function WhatsAppButton({ phone = '1234567890' }: { phone?: strin
         <img
           src="/wa.svg"
           alt="WhatsApp"
-          className="w-12 h-12"
+          className="w-8 h-8 sm:w-12 sm:h-12"
           onError={() => setImgError(true)}
         />
       ) : (
