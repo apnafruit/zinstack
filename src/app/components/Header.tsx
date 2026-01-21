@@ -107,7 +107,7 @@ export default function Header() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-[#EDEFF2]"
+            className="md:hidden text-[#EDEFF2] p-2 rounded-md touch-manipulation"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -115,7 +115,7 @@ export default function Header() {
         </div>
 
         {/* Mobile Navigation */}
-        {mobileMenuOpen && (
+          {mobileMenuOpen && (
           <motion.nav
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -126,7 +126,7 @@ export default function Header() {
               <a
                 key={index}
                 href={item.href}
-                className="block text-[#9AA4B2] hover:text-[#EDEFF2] transition-colors py-2"
+                className="block text-[#9AA4B2] hover:text-[#EDEFF2] transition-colors py-3 px-2 min-h-[44px] touch-manipulation"
                 style={{ fontFamily: "'Inter', sans-serif", fontWeight: 500 }}
                 onClick={() => setMobileMenuOpen(false)}
               >
