@@ -132,12 +132,36 @@ export default function Header() {
                 {item.label}
               </a>
             ))}
-            <button
-              className="w-full bg-[#3B82F6] text-white px-6 py-3 rounded-lg"
-              style={{ fontFamily: "'Inter', sans-serif", fontWeight: 600 }}
-            >
-              Get Started
-            </button>
+            <motion.a
+  href="https://wa.me/917382674757"
+  target="_blank"
+  rel="noopener noreferrer"
+  whileHover={{ scale: 1.05 }}
+  whileTap={{ scale: 0.95 }}
+  className="
+    inline-flex items-center gap-3
+    px-6 py-2
+    rounded-full
+    border border-blue-500
+    text-blue-400
+    bg-[radial-gradient(circle_at_top_left,#2563eb33,transparent_60%)]
+    hover:shadow-[0_0_25px_rgba(59,130,246,0.45)]
+    transition-all duration-300
+  "
+  style={{ fontFamily: "'sora', sans-serif", fontWeight: 1000 }}
+>
+  <span>Let's talk</span>
+
+  <span className="
+    flex items-center justify-center
+    w-7 h-7
+    rounded-full
+    bg-gray-700
+    text-white
+  ">
+    <ArrowUpRight size={26} />
+  </span>
+</motion.a>
           </motion.nav>
         )}
       </div>

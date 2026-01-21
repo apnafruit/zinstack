@@ -1,3 +1,35 @@
 @import './fonts.css';
 @import './tailwind.css';
 @import './theme.css';
+
+/* Prevent horizontal overflow on mobile */
+html, body, #root {
+	overscroll-behavior-x: none;
+}
+
+/* Ensure no accidental horizontal scroll */
+body {
+	overflow-x: hidden;
+}
+
+/* Make images, videos and svgs responsive by default */
+img, picture, video, svg {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+/* Prefer object-cover for media inside containers */
+.responsive-media {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+/* Ensure touch targets are at least 44x44 */
+.touch-friendly {
+	min-width: 44px;
+	min-height: 44px;
+	padding: 8px;
+}
+
