@@ -124,10 +124,10 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 py-16 sm:py-20 relative z-10">
+      <div className="max-w-[1440px] mx-auto px-6 lg:px-12 py-20 relative z-10">
         <div className="relative">
           {/* Abstract industrial silhouettes (flat shapes) */}
-          <svg className="hidden lg:block absolute -left-8 top-6 w-[44%] h-[52%] opacity-30" viewBox="0 0 800 600" fill="none" aria-hidden>
+          <svg className="absolute -left-8 top-6 w-[44%] h-[52%] opacity-30" viewBox="0 0 800 600" fill="none" aria-hidden>
             <g fill="#0F1720">
               <rect x="40" y="160" width="140" height="340" rx="6" fill="#0a4180" />
               <rect x="200" y="220" width="100" height="280" rx="4" fill="#032246" />
@@ -148,7 +148,7 @@ export default function Hero() {
                 initial={{ x: -80, y: 6, opacity: 0 }}
                 animate={{ x: 0, y: 0, opacity: 1 }}
                 transition={{ duration: 0.9, ease: [0.2,0.8,0.2,1] }}
-                className="w-full text-[clamp(36px,8vw,120px)] sm:text-[clamp(48px,10vw,160px)] leading-[0.85] font-extrabold text-white tracking-tight"
+                className="w-full text-[clamp(48px,10vw,160px)] leading-[0.85] font-extrabold text-white tracking-tight"
                 style={{ fontFamily: 'var(--font-manrope), system-ui, sans-serif' }}
               >
                 ZINSTACK
@@ -158,7 +158,7 @@ export default function Hero() {
                 initial={{ x: -56, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.9, delay: 0.28, ease: [0.2,0.8,0.2,1] }}
-                className="mt-4 sm:mt-6 text-base sm:text-lg text-[#9AA4B2] max-w-2xl"
+                className="mt-6 text-lg text-[#9AA4B2] max-w-2xl"
                 style={{ fontFamily: "'Inter', sans-serif" }}
               >
                 Strategic digital products and platforms for scalable businesses. We build reliable systems, not toys.
@@ -169,7 +169,7 @@ export default function Hero() {
                 initial={{ x: -40, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.5, ease: [0.2,0.8,0.2,1] }}
-                className="mt-6 sm:mt-8 inline-flex items-center gap-4 text-lg sm:text-2xl text-[#EDEFF2] hover:text-red-600 transition-colors group touch-friendly"
+                className="mt-8 inline-flex items-center gap-4 text-2xl text-[#EDEFF2] hover:text-red-600 transition-colors group"
               >
                 <span>View work</span>
 
