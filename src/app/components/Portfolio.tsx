@@ -24,7 +24,7 @@ export default function Portfolio() {
   ];
 
   return (
-    <section className="py-24 lg:py-32 px-6 lg:px-12">
+    <section className="py-16 lg:py-32 px-4 sm:px-6 lg:px-12 overflow-hidden">
       <div className="max-w-[1440px] mx-auto">
         {/* Header */}
         <motion.div
@@ -34,16 +34,16 @@ export default function Portfolio() {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl mb-4 font-bold">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-4 font-bold">
             20+ websites built for growing brands.
           </h2>
-          <p className="text-lg text-[#9AA4B2] max-w-2xl">
+          <p className="text-base sm:text-lg text-[#9AA4B2] max-w-2xl">
             Real products. Real businesses. Real results.
           </p>
         </motion.div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (
             <motion.div
               key={index}
@@ -56,7 +56,7 @@ export default function Portfolio() {
                 ${index === 3 ? "lg:col-span-2" : ""}
               `}
             >
-              <div className="relative aspect-[4/3] bg-black overflow-hidden">
+              <div className="relative aspect-[4/3] sm:aspect-[16/9] bg-black overflow-hidden">
                 {/* VIDEO */}
                 {project.video && (
                   <video
@@ -66,7 +66,7 @@ export default function Portfolio() {
                     loop
                     playsInline
                     preload="auto"
-                    className="absolute inset-0 w-full h-full object-cover"
+                    className="absolute inset-0 w-full h-full object-cover responsive-media"
                   />
                 )}
 
@@ -74,7 +74,7 @@ export default function Portfolio() {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0B0F14]/85 via-[#0B0F14]/50 to-transparent" />
 
                 {/* Content */}
-                <div className="absolute inset-0 p-8 flex flex-col justify-end">
+                <div className="absolute inset-0 p-4 sm:p-6 md:p-8 flex flex-col justify-end">
                   <div className="space-y-2">
                     <div className="flex items-center gap-2">
                       <span className="text-xs text-[#3B82F6] uppercase tracking-wider font-semibold">
@@ -83,11 +83,11 @@ export default function Portfolio() {
                       <ArrowUpRight role="img" aria-label={`${project.category} link`} className="icon-glow w-4 h-4" />
                     </div>
 
-                    <h3 className="text-2xl md:text-3xl font-semibold">
+                    <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold">
                       {project.title}
                     </h3>
 
-                    <p className="text-sm text-[#9AA4B2]">
+                    <p className="text-xs sm:text-sm text-[#9AA4B2]">
                       {project.result}
                     </p>
                   </div>

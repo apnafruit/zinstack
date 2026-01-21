@@ -31,7 +31,7 @@ export default function Header() {
         ? 'bg-[#0B0F14]/95 border-[#9AA4B2]/20 shadow-lg' 
         : 'bg-[#0B0F14]/80 border-[#9AA4B2]/10'
     }`}>
-      <div className="max-w-[1440px] mx-auto px-6 lg:px-12 py-4">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 py-3">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <motion.div
@@ -39,15 +39,11 @@ export default function Header() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <a
-  href="#"
-  className="flex items-center gap-2 text-xl text-[#EDEFF2] hover:text-[#3B82F6] transition-colors"
-  style={{ fontFamily: "'marope', sans-serif", fontWeight: 500 }}
->
+            <a href="#" className="flex items-center gap-2 text-lg sm:text-xl text-[#EDEFF2] hover:text-[#3B82F6] transition-colors" style={{ fontFamily: "'marope', sans-serif", fontWeight: 500 }}>
   <img
     src="/zslogo.svg"
     alt="ZS Logo"
-    className="w-12 h-12"
+    className="w-10 h-10 sm:w-12 sm:h-12"
   />
   <span>ZIVSTACK</span>
 </a>
@@ -59,13 +55,13 @@ export default function Header() {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="hidden md:flex items-center gap-8"
+            className="hidden md:flex items-center gap-6"
           >
             {navItems.map((item, index) => (
               <a
                 key={index}
                 href={item.href}
-                className="text-[#9AA4B2] hover:text-[#EDEFF2] transition-colors relative group"
+                className="text-[#9AA4B2] hover:text-[#EDEFF2] transition-colors relative group text-sm md:text-base"
                 style={{ fontFamily: "'Inter', sans-serif", fontWeight: 500 }}
               >
                 {item.label}
@@ -106,8 +102,10 @@ export default function Header() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-[#EDEFF2]"
+            className="md:hidden text-[#EDEFF2] touch-friendly"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-expanded={mobileMenuOpen}
+            aria-controls="mobile-navigation"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -116,16 +114,18 @@ export default function Header() {
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
           <motion.nav
-            initial={{ opacity: 0, y: -20 }}
+            id="mobile-navigation"
+            initial={{ opacity: 0, y: -12 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="md:hidden pt-6 pb-4 space-y-4"
+            exit={{ opacity: 0, y: -12 }}
+            className="md:hidden pt-4 pb-4 space-y-3 bg-transparent"
+            role="menu"
           >
             {navItems.map((item, index) => (
               <a
                 key={index}
                 href={item.href}
-                className="block text-[#9AA4B2] hover:text-[#EDEFF2] transition-colors py-2"
+                className="block text-[#9AA4B2] hover:text-[#EDEFF2] transition-colors py-2 px-2 touch-friendly text-base"
                 style={{ fontFamily: "'Inter', sans-serif", fontWeight: 500 }}
                 onClick={() => setMobileMenuOpen(false)}
               >
@@ -133,7 +133,7 @@ export default function Header() {
               </a>
             ))}
             <button
-              className="w-full bg-[#3B82F6] text-white px-6 py-3 rounded-lg"
+              className="w-full bg-[#3B82F6] text-white px-4 py-3 rounded-lg touch-friendly"
               style={{ fontFamily: "'Inter', sans-serif", fontWeight: 600 }}
             >
               Get Started
