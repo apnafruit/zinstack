@@ -74,6 +74,9 @@ export default function FinalCTA() {
                 <li>
                   <a href="#contact" className="text-[#D1D5DB] hover:text-[#EDEFF2] transition-colors">Contact</a>
                 </li>
+                <li>
+                  <a href="/about" className="text-[#D1D5DB] hover:text-[#EDEFF2] transition-colors">About</a>
+                </li>
               </ul>
             </div>
 

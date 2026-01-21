@@ -9,8 +9,47 @@ import Testimonials from '@/app/components/Testimonials';
 import FinalCTA from '@/app/components/FinalCTA';
 import ScrollToTop from '@/app/components/ScrollToTop';
 import WhatsAppButton from '@/app/components/WhatsAppButton';
+import About from '@/app/About';
+import { useEffect, useState } from 'react';
 
 export default function App() {
+  const [route, setRoute] = useState<string>(typeof window !== 'undefined' ? window.location.pathname : '/');
+
+  useEffect(() => {
+    const onPop = () => setRoute(window.location.pathname);
+
+    const onClick = (e: MouseEvent) => {
+      const target = e.target as HTMLElement | null;
+      if (!target) return;
+      const anchor = (target.closest && target.closest('a')) as HTMLAnchorElement | null;
+      if (!anchor) return;
+      const href = anchor.getAttribute('href');
+      if (!href) return;
+
+      // Only handle same-origin absolute paths like /about
+      try {
+        const url = new URL(href, window.location.origin);
+        if (url.origin === window.location.origin && url.pathname.startsWith('/')) {
+          e.preventDefault();
+          if (window.location.pathname !== url.pathname) {
+            window.history.pushState({}, '', url.pathname + url.search + url.hash);
+            setRoute(url.pathname);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }
+        }
+      } catch (err) {
+        // ignore invalid URLs
+      }
+    };
+
+    window.addEventListener('popstate', onPop);
+    document.addEventListener('click', onClick);
+    return () => {
+      window.removeEventListener('popstate', onPop);
+      document.removeEventListener('click', onClick);
+    };
+  }, []);
+
   return (
     <div className="min-h-screen bg-[#0B0F14] text-[#EDEFF2] antialiased relative">
       {/* Subtle grain texture overlay */}
@@ -23,22 +62,28 @@ export default function App() {
       />
       <Header />
       <main className="pt-16">
-        <Hero />
-        <ProblemSolution />
-        <section id="services">
-          <Services />
-        </section>
-        <section id="work">
-          <Portfolio />
-        </section>
-        <section id="process">
-          <Process />
-        </section>
-        <TechStack />
-        <Testimonials />
-        <section id="contact">
-          <FinalCTA />
-        </section>
+        {route === '/about' ? (
+          <About />
+        ) : (
+          <>
+            <Hero />
+            <ProblemSolution />
+            <section id="services">
+              <Services />
+            </section>
+            <section id="work">
+              <Portfolio />
+            </section>
+            <section id="process">
+              <Process />
+            </section>
+            <TechStack />
+            <Testimonials />
+            <section id="contact">
+              <FinalCTA />
+            </section>
+          </>
+        )}
       </main>
       <ScrollToTop />
       <WhatsAppButton />

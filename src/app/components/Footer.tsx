@@ -57,17 +57,29 @@ export default function Footer() {
                 {category}
               </h3>
               <ul className="space-y-3">
-                {links.map((link, linkIndex) => (
-                  <li key={linkIndex}>
-                    <a
-                      href="#"
-                      className="text-[#9AA4B2] hover:text-[#EDEFF2] transition-colors text-sm"
-                      style={{ fontFamily: "'Inter', sans-serif" }}
-                    >
-                      {link}
-                    </a>
-                  </li>
-                ))}
+                {links.map((link, linkIndex) => {
+                  const linkHref = link === 'About'
+                    ? '/about'
+                    : link === 'Work'
+                    ? '#work'
+                    : link === 'Process'
+                    ? '#process'
+                    : link === 'Contact'
+                    ? '#contact'
+                    : '#';
+
+                  return (
+                    <li key={linkIndex}>
+                      <a
+                        href={linkHref}
+                        className="text-[#9AA4B2] hover:text-[#EDEFF2] transition-colors text-sm"
+                        style={{ fontFamily: "'Inter', sans-serif" }}
+                      >
+                        {link}
+                      </a>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           ))}
