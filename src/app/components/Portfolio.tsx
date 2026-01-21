@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import { useState } from "react";
-import { ArrowUpRight, ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowUpRight, ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function Portfolio() {
   const [mobileIndex, setMobileIndex] = useState(0);
@@ -96,6 +96,16 @@ export default function Portfolio() {
               </div>
             </div>
           </div>
+
+          <div className="flex justify-center mt-3">
+            <a
+              href="#"
+              className="inline-flex items-center gap-2 text-blue-400 hover:underline transform hover:scale-105 transition-transform touch-friendly"
+            >
+              <span>View more</span>
+              <ArrowRight className="w-4 h-4" />
+            </a>
+          </div>
         </div>
 
         {/* Grid - desktop/tablet view */}
@@ -154,6 +164,16 @@ export default function Portfolio() {
               </div>
             </motion.div>
           ))}
+        </div>
+
+        <div className="hidden md:flex justify-end mt-6">
+          <a
+            href="#"
+            className="inline-flex items-center gap-2 text-blue-400 hover:underline transform hover:scale-105 transition-transform touch-friendly"
+          >
+            <span>View more</span>
+            <ArrowRight className="w-4 h-4" />
+          </a>
         </div>
       </div>
     </section>
