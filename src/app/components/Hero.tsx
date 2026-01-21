@@ -27,6 +27,24 @@ export default function Hero() {
       <span className="hidden lg:block absolute right-6 top-1/2 -translate-y-1/2 rotate-90 text-white/15 tracking-[0.35em] text-sm">
         SYSTEMS
       </span>
+      
+      {/* Bottom marquee (hidden on very small screens) */}
+      <div className="hidden sm:block border-t border-b border-white/5 overflow-hidden">
+        <motion.div
+          className="flex whitespace-nowrap py-4"
+          animate={{ x: ["0%", "-50%"] }}
+          transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
+        >
+          {Array.from({ length: 3 }).map((_, i) => (
+            <span
+              key={i}
+              className="mx-8 text-white/40 tracking-[0.3em] uppercase text-sm"
+            >
+              Building reliable digital systems — scalable • strategic • engineered for growth
+            </span>
+          ))}
+        </motion.div>
+      </div>
 
       {/* Content */}
       <div className="relative max-w-[1440px] mx-auto px-4 sm:px-8 pt-32 pb-24 sm:pt-40 sm:pb-32">
@@ -76,9 +94,9 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.6, duration: 0.8 }}
-          className="mt-16 max-w-2xl font-extrabold leading-tight
+          className="mt-16 max-w-2xl font-semibold leading-tight
             text-white
-            text-[clamp(22px,5vw,56px)]"
+            text-sm"
         >
           Over <span className="text-blue-400">90%</span> of the world lives online.
           Your audience is one click away.
@@ -90,23 +108,6 @@ export default function Hero() {
         </p>
       </div>
 
-      {/* Bottom marquee (hidden on very small screens) */}
-      <div className="hidden sm:block border-t border-white/5 overflow-hidden">
-        <motion.div
-          className="flex whitespace-nowrap py-4"
-          animate={{ x: ["0%", "-50%"] }}
-          transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-        >
-          {Array.from({ length: 3 }).map((_, i) => (
-            <span
-              key={i}
-              className="mx-8 text-white/40 tracking-[0.3em] uppercase text-sm"
-            >
-              Building reliable digital systems — scalable • strategic • engineered for growth
-            </span>
-          ))}
-        </motion.div>
-      </div>
     </section>
   );
 }
