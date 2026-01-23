@@ -16,7 +16,7 @@ export default function Hero() {
       {/* Huge background brand */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none">
         <span className="font-extrabold tracking-tight text-white/5 text-[40vw] sm:text-[28vw] md:text-[18vw] lg:text-[12vw] leading-none">
-          ZINSTACK
+          ZIVSTACK
         </span>
       </div>
 
@@ -56,7 +56,7 @@ export default function Hero() {
             text-[clamp(36px,8vw,96px)]
             max-w-3xl"
         >
-          ZINSTACK
+          ZIVSTACK
         </motion.h1>
 
         <motion.p

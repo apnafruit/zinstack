@@ -99,7 +99,7 @@ export default function Portfolio() {
 
           <div className="flex justify-center mt-3">
             <a
-              href="#"
+              href="/work"
               className="inline-flex items-center gap-2 text-blue-400 hover:underline transform hover:scale-105 transition-transform touch-friendly"
             >
               <span>View more</span>
@@ -168,7 +168,7 @@ export default function Portfolio() {
 
         <div className="hidden md:flex justify-end mt-6">
           <a
-            href="#"
+            href="/work"
             className="inline-flex items-center gap-2 text-blue-400 hover:underline transform hover:scale-105 transition-transform touch-friendly"
           >
             <span>View more</span>

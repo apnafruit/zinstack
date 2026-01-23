@@ -10,6 +10,7 @@ import FinalCTA from '@/app/components/FinalCTA';
 import ScrollToTop from '@/app/components/ScrollToTop';
 import WhatsAppButton from '@/app/components/WhatsAppButton';
 import About from '@/app/About';
+import Work from '@/app/work';
 import { useEffect, useState } from 'react';
 
 export default function App() {
@@ -64,6 +65,8 @@ export default function App() {
       <main className="pt-16">
         {route === '/about' ? (
           <About />
+        ) : route === '/work' ? (
+          <Work />
         ) : (
           <>
             <Hero />
