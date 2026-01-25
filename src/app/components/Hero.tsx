@@ -106,6 +106,9 @@ export default function Hero() {
         <p className="mt-12 text-white/50 text-sm">
           Contact us at <span className="text-white">+91 7382674757</span>
         </p>
+         <p className="mt-12 text-white/50 text-sm">
+          Email us at <span className="text-white">contact@zivstack.in</span>
+        </p>
       </div>
 
     </section>

@@ -3,7 +3,8 @@ import Hero from '@/app/components/Hero';
 import ProblemSolution from '@/app/components/ProblemSolution';
 import Services from '@/app/components/Services';
 import Portfolio from '@/app/components/Portfolio';
-import Process from '@/app/components/Process';
+import Industries from '@/app/components/Industries';
+import Products from '@/app/components/Products';
 import TechStack from '@/app/components/TechStack';
 import Testimonials from '@/app/components/Testimonials';
 import FinalCTA from '@/app/components/FinalCTA';
@@ -11,6 +12,7 @@ import ScrollToTop from '@/app/components/ScrollToTop';
 import WhatsAppButton from '@/app/components/WhatsAppButton';
 import About from '@/app/About';
 import Work from '@/app/work';
+import Blog from '@/app/blog';
 import { useEffect, useState } from 'react';
 
 export default function App() {
@@ -67,6 +69,8 @@ export default function App() {
           <About />
         ) : route === '/work' ? (
           <Work />
+        ) : route === '/blog' ? (
+          <Blog />
         ) : (
           <>
             <Hero />
@@ -77,8 +81,11 @@ export default function App() {
             <section id="work">
               <Portfolio />
             </section>
-            <section id="process">
-              <Process />
+            <section id="industries">
+              <Industries />
+            </section>
+            <section id="products">
+              <Products />
             </section>
             <TechStack />
             <Testimonials />

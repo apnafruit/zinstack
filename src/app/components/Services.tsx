@@ -1,31 +1,151 @@
 import { motion } from 'motion/react';
-import { Code2, Palette, Gauge, Headphones } from 'lucide-react';
+import { Code2 } from 'lucide-react';
 
 export default function Services() {
   const services = [
     {
       icon: Code2,
+      title: "Mobile App Development",
+      description: "Native iOS, Android and cross-platform apps with exceptional UX.",
+      outcomes: ["iOS & Android", "React Native / Flutter", "App Store deployment"]
+    },
+    {
+      icon: Code2,
       title: "Website Development",
-      description: "Custom-built websites using modern frameworks. Scalable, maintainable, and built for growth.",
-      outcomes: ["React & Next.js", "Responsive design", "SEO optimized"]
+      description: "Modern responsive websites and progressive web apps built with React and Next.js.",
+      outcomes: ["React & Next.js", "PWA-ready", "Responsive & accessible"]
     },
     {
-      icon: Palette,
+      icon: Code2,
+      title: "DevOps Services",
+      description: "CI/CD pipelines, infrastructure automation, and deployment solutions.",
+      outcomes: ["CI/CD pipelines", "Infrastructure as Code", "Automated deployments"]
+    },
+    {
+      icon: Code2,
+      title: "Cloud Services",
+      description: "AWS, Azure and GCP cloud infrastructure, migration and enterprise management.",
+      outcomes: ["Cloud migration", "Multi-cloud architecture", "Cost & security optimizations"]
+    },
+    {
+      icon: Code2,
+      title: "AI & ML Solutions",
+      description: "Intelligent automation, predictive analytics, NLP and computer vision solutions.",
+      outcomes: ["Predictive models", "NLP & chatbots", "Computer vision"]
+    },
+    {
+      icon: Code2,
+      title: "E-commerce Development",
+      description: "Complete online store solutions with payments and inventory management.",
+      outcomes: ["Payment integration", "Inventory & catalog", "Checkout optimization"]
+    },
+    {
+      icon: Code2,
+      title: "Custom Software",
+      description: "Tailored enterprise applications and bespoke solutions for unique requirements.",
+      outcomes: ["Enterprise apps", "Custom integrations", "Scalable architecture"]
+    },
+    {
+      icon: Code2,
+      title: "Testing & QA",
+      description: "Comprehensive testing including automation, performance and security QA.",
+      outcomes: ["Test automation", "Performance testing", "Security audits"]
+    },
+    {
+      icon: Code2,
       title: "UI/UX Design",
-      description: "User-first interfaces that guide visitors toward action. Beautiful, intuitive, and conversion-focused.",
-      outcomes: ["Wireframing", "Prototyping", "User testing"]
+      description: "User-centered design, wireframing, prototyping and visual interfaces.",
+      outcomes: ["Wireframes & flows", "Interactive prototypes", "User research"]
     },
     {
-      icon: Gauge,
-      title: "Performance & SEO",
-      description: "Lightning-fast load times and search engine visibility. Built for speed and discoverability.",
-      outcomes: ["Core Web Vitals", "Technical SEO", "Page speed optimization"]
+      icon: Code2,
+      title: "ERP & CRM Solutions",
+      description: "Enterprise resource planning and customer relationship management systems.",
+      outcomes: ["ERP integrations", "CRM customization", "Operational automation"]
     },
     {
-      icon: Headphones,
-      title: "Ongoing Support",
-      description: "Continuous maintenance, updates, and improvements. Your success is our priority.",
-      outcomes: ["24/7 monitoring", "Regular updates", "Priority support"]
+      icon: Code2,
+      title: "Web3 Development",
+      description: "Decentralized applications, smart contracts and Web3 solutions.",
+      outcomes: ["dApp development", "Wallet integrations", "Tokenomics"]
+    },
+    {
+      icon: Code2,
+      title: "Blockchain & Dapp",
+      description: "Secure blockchain implementations and decentralized application development.",
+      outcomes: ["Smart contracts", "Audit-ready code", "Decentralized storage"]
+    },
+    {
+      icon: Code2,
+      title: "Game Development",
+      description: "Engaging mobile and web games with stunning graphics and multiplayer features.",
+      outcomes: ["2D & 3D games", "Multiplayer backend", "Performance & optimization"]
+    },
+    {
+      icon: Code2,
+      title: "SaaS Applications",
+      description: "Scalable cloud-based SaaS platforms with multi-tenant and billing systems.",
+      outcomes: ["Multi-tenant design", "Automated billing", "Scalable infra"]
+    },
+    {
+      icon: Code2,
+      title: "Graphic Design",
+      description: "Brand identity, logos and marketing materials for strong visual presence.",
+      outcomes: ["Brand identity", "Logo design", "Marketing collateral"]
+    },
+    {
+      icon: Code2,
+      title: "Video & Animation",
+      description: "Professional video production, motion graphics and animated content.",
+      outcomes: ["Explainers & promos", "Motion graphics", "Post-production"]
+    },
+    {
+      icon: Code2,
+      title: "Digital Marketing",
+      description: "Comprehensive digital strategies to grow online presence and revenue.",
+      outcomes: ["SEO & content", "Growth strategy", "Analytics & reporting"]
+    },
+    {
+      icon: Code2,
+      title: "Social Media Marketing",
+      description: "Audience engagement and brand awareness across social platforms.",
+      outcomes: ["Content strategy", "Community growth", "Ad creative"]
+    },
+    {
+      icon: Code2,
+      title: "Ads Management",
+      description: "Google Ads, Facebook Ads and multi-channel advertising campaign management.",
+      outcomes: ["Campaign strategy", "A/B testing", "Conversion optimization"]
+    },
+    {
+      icon: Code2,
+      title: "Email Marketing",
+      description: "Targeted email campaigns, automation workflows and newsletters.",
+      outcomes: ["Drip campaigns", "Automation workflows", "Segmentation"]
+    },
+    {
+      icon: Code2,
+      title: "Content Writing",
+      description: "SEO-optimized content, blogs, copywriting and technical documentation.",
+      outcomes: ["SEO content", "Technical docs", "Marketing copy"]
+    },
+    {
+      icon: Code2,
+      title: "IT Consulting",
+      description: "Strategic technology consulting and digital transformation guidance.",
+      outcomes: ["Technology strategy", "Roadmapping", "Cost & risk analysis"]
+    },
+    {
+      icon: Code2,
+      title: "POS & Billing Systems",
+      description: "Point of sale solutions with inventory, billing and real-time analytics.",
+      outcomes: ["POS integrations", "Inventory sync", "Real-time reports"]
+    },
+    {
+      icon: Code2,
+      title: "HRMS Development",
+      description: "Human resource management systems for payroll, attendance and employee management.",
+      outcomes: ["Payroll & benefits", "Attendance tracking", "Employee self-service"]
     }
   ];
 
@@ -53,10 +173,10 @@ export default function Services() {
             return (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0.5, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ duration: 0.3, delay: index * 0.1 }}
                 whileHover={{ y: -5 }}
                 className="bg-[#1A1F2C]/50 border border-[#9AA4B2]/10 rounded-xl p-8 space-y-6 transition-all hover:border-[#3B82F6]/30 hover:shadow-[0_0_30px_rgba(59,130,246,0.1)] cursor-pointer"
               >

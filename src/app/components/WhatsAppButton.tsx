@@ -1,11 +1,15 @@
-import { useState } from 'react';
-import { motion } from 'motion/react';
-import { MessageSquare } from 'lucide-react';
+import { useState } from "react";
+import { motion } from "motion/react";
+import { MessageSquare } from "lucide-react";
 
-export default function WhatsAppButton({ phone = '1234567890' }: { phone?: string }) {
+export default function WhatsAppButton({
+  phone = "917382674757",
+}: {
+  phone?: string;
+}) {
   const [imgError, setImgError] = useState(false);
-  const normalized = phone.replace(/\D/g, '');
-  const waLink = `https://wa.me/917382674757`;
+  const normalized = phone.replace(/\D/g, "");
+  const waLink = `https://wa.me/${normalized}`;
 
   return (
     <motion.a
@@ -14,21 +18,41 @@ export default function WhatsAppButton({ phone = '1234567890' }: { phone?: strin
       rel="noreferrer"
       initial={{ opacity: 0, scale: 0.9 }}
       animate={{ opacity: 1, scale: 1 }}
-      className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 bg-[#25D366] text-black p-2 sm:p-3 rounded-full shadow-lg hover:shadow-[0_0_30px_rgba(37,211,102,0.3)] transition-shadow flex items-center justify-center min-w-[44px] min-h-[44px]"
       whileHover={{ scale: 1.05 }}
       aria-label="Chat on WhatsApp"
       title="Chat on WhatsApp"
+      className="
+        fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50
+        flex items-center gap-2
+        h-12 sm:h-14
+        px-4
+        bg-[#25D366]
+        text-black
+        rounded-full
+        shadow-lg
+        hover:shadow-[0_0_30px_rgba(37,211,102,0.3)]
+        transition-all duration-300 ease-out
+        min-w-[44px] min-h-[44px]
+      "
     >
-      {!imgError ? (
-        <img
-          src="/wa.svg"
-          alt="WhatsApp"
-          className="w-8 h-8 sm:w-12 sm:h-12"
-          onError={() => setImgError(true)}
-        />
-      ) : (
-        <MessageSquare className="w-6 h-6" />
-      )}
+      {/* Icon */}
+      <div className="flex items-center justify-center">
+        {!imgError ? (
+          <img
+            src="/wa.svg"
+            alt="WhatsApp"
+            className="w-6 h-6 sm:w-7 sm:h-7"
+            onError={() => setImgError(true)}
+          />
+        ) : (
+          <MessageSquare className="w-6 h-6" />
+        )}
+      </div>
+
+      {/* Text – always visible */}
+      <span className="whitespace-nowrap text-white text-sm font-semibold">
+        WhatsApp us
+      </span>
     </motion.a>
   );
 }
