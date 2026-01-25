@@ -13,6 +13,7 @@ import WhatsAppButton from '@/app/components/WhatsAppButton';
 import About from '@/app/About';
 import Work from '@/app/work';
 import Blog from '@/app/blog';
+import ServicesPage from '@/app/services';
 import { useEffect, useState } from 'react';
 
 export default function App() {
@@ -71,6 +72,8 @@ export default function App() {
           <Work />
         ) : route === '/blog' ? (
           <Blog />
+        ) : route === '/services' ? (
+          <ServicesPage />
         ) : (
           <>
             <Hero />

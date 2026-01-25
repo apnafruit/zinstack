@@ -20,15 +20,15 @@ export default function Hero() {
         </span>
       </div>
 
-      {/* Side labels (desktop only) */}
+      {/* Side labels */}
       <span className="hidden lg:block absolute left-6 top-1/2 -translate-y-1/2 -rotate-90 text-white/15 tracking-[0.35em] text-sm">
         DESIGN
       </span>
       <span className="hidden lg:block absolute right-6 top-1/2 -translate-y-1/2 rotate-90 text-white/15 tracking-[0.35em] text-sm">
         SYSTEMS
       </span>
-      
-      {/* Bottom marquee (hidden on very small screens) */}
+
+      {/* Marquee */}
       <div className="hidden sm:block border-t border-b border-white/5 overflow-hidden">
         <motion.div
           className="flex whitespace-nowrap py-4"
@@ -69,48 +69,52 @@ export default function Hero() {
           We build reliable systems that you own.
         </motion.p>
 
-        {/* CTA */}
+        {/* 🔢 Stats Container */}
         <motion.div
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.4, duration: 0.8 }}
-          className="mt-10"
+          transition={{ delay: 0.35, duration: 0.8 }}
+          className="
+            mt-10
+            inline-flex flex-wrap items-center gap-6
+            px-6 py-4
+            rounded-xl
+            border border-white/10
+            bg-white/[0.03]
+            backdrop-blur
+          "
         >
-          <a
-            href="#work"
-            className="inline-flex items-center gap-4 min-h-[48px] px-6 py-3
-              text-white text-lg rounded-md
-              border border-white/20
-              hover:border-white hover:bg-white/5
-              transition"
-          >
-            View work
-            <ArrowRight className="w-5 h-5" />
-          </a>
+          <div className="flex items-baseline gap-2">
+            <span className="text-2xl font-bold text-white">30+</span>
+            <span className="text-sm text-white/60">Projects</span>
+          </div>
+
+          <div className="w-px h-6 bg-white/10 hidden sm:block" />
+
+          <div className="flex items-baseline gap-2">
+            <span className="text-2xl font-bold text-white">60+</span>
+            <span className="text-sm text-white/60">Members</span>
+          </div>
+
+          <div className="w-px h-6 bg-white/10 hidden sm:block" />
+
+          <div className="flex items-baseline gap-2">
+            <span className="text-2xl font-bold text-white">2+</span>
+            <span className="text-sm text-white/60">Years</span>
+          </div>
         </motion.div>
 
         {/* Statement */}
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.6, duration: 0.8 }}
-          className="mt-16 max-w-2xl font-semibold leading-tight
-            text-white
-            text-sm"
+          transition={{ delay: 0.7, duration: 0.8 }}
+          className="mt-16 max-w-2xl font-semibold leading-tight text-white text-sm"
         >
           Over <span className="text-blue-400">90%</span> of the world lives online.
           Your audience is one click away.
         </motion.p>
-
-        {/* Contact (mobile-friendly) */}
-        <p className="mt-12 text-white/50 text-sm">
-          Contact us at <span className="text-white">+91 7382674757</span>
-        </p>
-         <p className="mt-12 text-white/50 text-sm">
-          Email us at <span className="text-white">contact@zivstack.in</span>
-        </p>
       </div>
-
     </section>
   );
 }

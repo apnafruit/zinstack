@@ -8,20 +8,18 @@ import {
   Truck,
   Utensils,
   Radio,
-  ShieldCheck,
-  Globe,
-  Cpu,
+  LucideIcon,
 } from "lucide-react";
 
 type Industry = {
   id: string;
   title: string;
   subtitle?: string;
-  icon: React.ReactNode;
-  solutions?: string[];
-  benefits?: string[];
-  useCases?: string[];
-  technologies?: string[];
+  icon: LucideIcon;
+  color: string;
+  solutions: string[];
+  benefits: string[];
+  technologies: string[];
 };
 
 const industries: Industry[] = [
@@ -29,185 +27,186 @@ const industries: Industry[] = [
     id: "healthcare",
     title: "Healthcare",
     subtitle: "Healthcare Industry Solutions",
-    icon: <HeartPulse className="w-10 h-10 text-blue-400" />,
+    icon: HeartPulse,
+    color: "text-blue-400",
     solutions: [
       "Hospital Management Systems",
       "Electronic Health Records (EHR)",
       "Telemedicine platforms",
-      "Patient appointment scheduling",
+      "Patient scheduling",
     ],
-    benefits: [
-      "Improve patient care quality",
-      "Streamline hospital operations",
-      "Ensure HIPAA compliance",
-    ],
+    benefits: ["Improve patient care", "Streamline operations", "HIPAA compliance"],
     technologies: ["HL7 FHIR", "DICOM", "AI Diagnostics"],
   },
   {
     id: "ecommerce",
     title: "E-Commerce",
     subtitle: "E-Commerce Industry Solutions",
-    icon: <ShoppingCart className="w-10 h-10 text-indigo-400" />,
-    solutions: [
-      "B2C and B2B platforms",
-      "Marketplace development",
-      "Payment gateway integration",
-    ],
-    benefits: [
-      "Increase online sales",
-      "Personalized shopping experience",
-    ],
+    icon: ShoppingCart,
+    color: "text-indigo-400",
+    solutions: ["B2C & B2B platforms", "Marketplace development", "Payment integrations"],
+    benefits: ["Increase online sales", "Personalized shopping"],
     technologies: ["Shopify", "WooCommerce", "Stripe"],
   },
   {
     id: "finance",
     title: "Finance & Banking",
     subtitle: "Finance & Banking Industry Solutions",
-    icon: <Landmark className="w-10 h-10 text-emerald-400" />,
-    solutions: [
-      "Mobile banking apps",
-      "Payment processing",
-      "Loan management systems",
-    ],
-    benefits: [
-      "Enhanced security",
-      "Fraud detection",
-    ],
+    icon: Landmark,
+    color: "text-emerald-400",
+    solutions: ["Mobile banking apps", "Payment processing", "Loan systems"],
+    benefits: ["Enhanced security", "Fraud detection"],
     technologies: ["Blockchain", "AI/ML", "Cloud Banking"],
   },
   {
     id: "education",
     title: "Education",
     subtitle: "Education Industry Solutions",
-    icon: <GraduationCap className="w-10 h-10 text-yellow-400" />,
-    solutions: [
-      "Learning Management Systems",
-      "Virtual classrooms",
-      "Online examinations",
-    ],
-    benefits: [
-      "Enable remote learning",
-      "Track student performance",
-    ],
+    icon: GraduationCap,
+    color: "text-yellow-400",
+    solutions: ["Learning Management Systems", "Virtual classrooms", "Online exams"],
+    benefits: ["Remote learning", "Performance tracking"],
     technologies: ["Cloud LMS", "Video Streaming"],
   },
   {
     id: "real-estate",
     title: "Real Estate",
     subtitle: "Real Estate Industry Solutions",
-    icon: <Home className="w-10 h-10 text-pink-400" />,
-    solutions: [
-      "Property listing portals",
-      "CRM for agents",
-      "Virtual property tours",
-    ],
-    benefits: [
-      "Faster transactions",
-      "Better lead management",
-    ],
+    icon: Home,
+    color: "text-pink-400",
+    solutions: ["Property portals", "CRM for agents", "Virtual tours"],
+    benefits: ["Faster transactions", "Lead optimization"],
     technologies: ["VR/AR", "Cloud CRM"],
   },
   {
     id: "logistics",
     title: "Logistics",
     subtitle: "Logistics Industry Solutions",
-    icon: <Truck className="w-10 h-10 text-orange-400" />,
-    solutions: [
-      "Fleet management",
-      "Route optimization",
-      "Real-time tracking",
-    ],
-    benefits: [
-      "Reduce operational costs",
-      "Improve delivery times",
-    ],
+    icon: Truck,
+    color: "text-orange-400",
+    solutions: ["Fleet management", "Route optimization", "Live tracking"],
+    benefits: ["Lower costs", "Faster delivery"],
     technologies: ["GPS", "IoT", "AI Optimization"],
   },
   {
-    id: "food-beverage",
+    id: "food",
     title: "Food & Beverage",
     subtitle: "Food & Beverage Industry Solutions",
-    icon: <Utensils className="w-10 h-10 text-red-400" />,
-    solutions: [
-      "Restaurant POS",
-      "Online ordering",
-      "Kitchen display systems",
-    ],
-    benefits: [
-      "Faster order processing",
-      "Reduce kitchen errors",
-    ],
+    icon: Utensils,
+    color: "text-red-400",
+    solutions: ["Restaurant POS", "Online ordering", "Kitchen displays"],
+    benefits: ["Faster orders", "Reduced errors"],
     technologies: ["Cloud POS", "Payment Integration"],
   },
   {
-    id: "mass-media",
+    id: "media",
     title: "Mass Media",
     subtitle: "Mass Media Industry Solutions",
-    icon: <Radio className="w-10 h-10 text-purple-400" />,
-    solutions: [
-      "Streaming platforms",
-      "Content management",
-      "Ad-tech integrations",
-    ],
-    benefits: [
-      "Reach large audiences",
-      "Monetize content",
-    ],
+    icon: Radio,
+    color: "text-purple-400",
+    solutions: ["Streaming platforms", "Content management", "Ad-tech systems"],
+    benefits: ["Wider reach", "Content monetization"],
     technologies: ["CDN", "Streaming Protocols"],
   },
 ];
 
 export default function Industries() {
   return (
-    <section id="industries" className="py-10 lg:py-10 px-6 lg:px-12">
+    <section id="industries" className="py-16 px-6 lg:px-12">
       <div className="max-w-[1440px] mx-auto">
+        {/* Heading */}
         <div className="text-center mb-14">
-          <p className="mt-4 text-2xl text-white max-w-5xl mx-auto">
+          <p className="text-2xl text-white max-w-5xl mx-auto">
             Tailored digital systems designed for industry-specific challenges.
           </p>
         </div>
 
+        {/* Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {industries.map((ind) => (
-            <article
-              key={ind.id}
-              className="p-6 bg-[#0E1320] border border-white/6 rounded-2xl hover:border-white/10 transition"
-            >
-              {/* Icon */}
-              <div className="mb-4">{ind.icon}</div>
+          {industries.map((ind) => {
+            const Icon = ind.icon;
 
-              <h3 className="font-bold text-xl mb-1">{ind.title}</h3>
-              {ind.subtitle && (
-                <div className="text-sm text-[#9AA4B2] mb-4">
-                  {ind.subtitle}
-                </div>
-              )}
+            return (
+              <div
+                key={ind.id}
+                className="
+                  relative group
+                  lg:[&:nth-child(4n)]:hover:[&>.hover-box]:right-full
+                  lg:[&:nth-child(4n)]:hover:[&>.hover-box]:left-auto
+                  lg:[&:nth-child(4n)]:hover:[&>.hover-box]:mr-4
+                  lg:[&:nth-child(4n)]:hover:[&>.hover-box]:ml-0
 
-              {ind.solutions && (
-                <div className="mb-4">
-                  <div className="text-sm font-semibold mb-2">Solutions</div>
-                  <ul className="list-disc list-inside text-sm text-white/70 space-y-1">
-                    {ind.solutions.map((s, i) => (
-                      <li key={i}>{s}</li>
-                    ))}
-                  </ul>
-                </div>
-              )}
+                  lg:[&:nth-child(4n-1)]:hover:[&>.hover-box]:right-full
+                  lg:[&:nth-child(4n-1)]:hover:[&>.hover-box]:left-auto
+                  lg:[&:nth-child(4n-1)]:hover:[&>.hover-box]:mr-4
+                  lg:[&:nth-child(4n-1)]:hover:[&>.hover-box]:ml-0
+                "
+              >
+                {/* Card */}
+                <article className="p-6 bg-[#0E1320] border border-white/6 rounded-2xl cursor-pointer transition hover:border-white/12">
+                  <div className="mb-4 w-14 h-14 flex items-center justify-center rounded-xl bg-white/5 group-hover:shadow-[0_0_25px_rgba(255,255,255,0.15)] transition">
+                    <Icon className={`w-7 h-7 ${ind.color}`} />
+                  </div>
 
-              {ind.technologies && (
-                <div className="flex flex-wrap gap-2 mt-4">
-                  {ind.technologies.map((t, i) => (
-                    <span
-                      key={i}
-                      className="px-2 py-1 bg-white/5 text-xs rounded"
-                    >
-                      {t}
-                    </span>
-                  ))}
+                  <h3 className="font-bold text-lg mb-1">{ind.title}</h3>
+
+                  {ind.subtitle && (
+                    <div className="text-sm text-[#9AA4B2]">
+                      {ind.subtitle}
+                    </div>
+                  )}
+                </article>
+
+                {/* Hover Detail Box */}
+                <div
+                  className="
+                    hover-box
+                    absolute top-1/2 left-full -translate-y-1/2 ml-4
+                    w-72 min-h-[16rem] max-h-[28rem]
+                    bg-[#0E1320] border border-white/10 rounded-2xl p-5
+                    opacity-0 scale-95 pointer-events-none
+                    transition-all duration-200 ease-out
+                    group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto
+                    z-50 hidden lg:flex flex-col overflow-y-auto
+                  "
+                >
+                  <div className="flex items-center gap-3 mb-3">
+                    <Icon className={`w-6 h-6 ${ind.color}`} />
+                    <span className="font-semibold text-white">{ind.title}</span>
+                  </div>
+
+                  <div className="mb-4">
+                    <div className="text-xs font-semibold mb-1">Solutions</div>
+                    <ul className="list-disc list-inside text-xs text-white/70 space-y-1">
+                      {ind.solutions.map((s, i) => (
+                        <li key={i}>{s}</li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="mb-4">
+                    <div className="text-xs font-semibold mb-1">Key Benefits</div>
+                    <ul className="list-disc list-inside text-xs text-white/70 space-y-1">
+                      {ind.benefits.map((b, i) => (
+                        <li key={i}>{b}</li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="mt-auto">
+                    <div className="text-xs font-semibold mb-1">Technologies</div>
+                    <div className="flex flex-wrap gap-1.5">
+                      {ind.technologies.map((t, i) => (
+                        <span key={i} className="px-2 py-0.5 bg-white/5 rounded text-xs">
+                          {t}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
                 </div>
-              )}
-            </article>
-          ))}
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>

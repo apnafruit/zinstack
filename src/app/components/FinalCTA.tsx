@@ -63,7 +63,7 @@ export default function FinalCTA() {
                   <a href="#hero" className="text-[#D1D5DB] hover:text-[#EDEFF2] transition-colors">Home</a>
                 </li>
                 <li>
-                  <a href="#services" className="text-[#D1D5DB] hover:text-[#EDEFF2] transition-colors">Services</a>
+                  <a href="/services" className="text-[#D1D5DB] hover:text-[#EDEFF2] transition-colors">Services</a>
                 </li>
                 <li>
                   <a href="#work" className="text-[#D1D5DB] hover:text-[#EDEFF2] transition-colors">Work</a>

@@ -29,7 +29,7 @@ export default function TechStack() {
   const loopedTech = [...technologies, ...technologies];
 
   return (
-    <section className="py-8 sm:py-12 overflow-hidden">
+    <section className="py-8 sm:py-12 overflow-hidden bg-[#0E1320]-50">
 <motion.div
   initial={{ opacity: 0, y: 20 }}
   whileInView={{ opacity: 1, y: 0 }}
@@ -38,10 +38,10 @@ export default function TechStack() {
   className="flex justify-center mb-16"
 >
   <p 
-    className="text-xl sm:text-2xl text-white font-bold text-center"
+    className="text-xl sm:text-2xl text-white text-center"
     style={{ fontFamily: "'sora', sans-serif" }}
   >
-    Our Cutting-Edge Tech Stack
+    Powered by a Modern Tech Stack
   </p>
 </motion.div>
 
