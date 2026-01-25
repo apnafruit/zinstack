@@ -125,15 +125,15 @@ const products: Product[] = [
 
 export default function Products() {
   return (
-    <section id="products" className="py-20 px-6 lg:px-12 bg-black">
+    <section id="products" className="py-12 sm:py-16 px-4 sm:px-6 lg:px-12 bg-black">
       <div className="max-w-[1440px] mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-xl sm:text-2xl md:text-3xl">
+        <div className="text-center mb-10">
+          <h2 className="text-lg sm:text-2xl md:text-3xl">
             Affordable ERP, CRM, POS, and HRMS — built to launch fast
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {products.map((p) => {
             const Icon = p.icon;
 
@@ -149,9 +149,9 @@ export default function Products() {
                 "
               >
                 {/* Card */}
-                <article className="bg-[#0E1320] border border-white/6 rounded-2xl p-6 flex flex-col items-center text-center cursor-pointer transition hover:border-white/12">
-                  <div className="mb-4 w-12 h-12 flex items-center justify-center rounded-xl bg-white/5 group-hover:shadow-[0_0_25px_rgba(255,255,255,0.15)] transition">
-                    <Icon className={`w-6 h-6 ${p.color}`} />
+                <article className="bg-[#0E1320] border border-white/6 rounded-2xl p-4 sm:p-6 flex flex-col items-center text-center cursor-pointer transition hover:border-white/12">
+                  <div className="mb-3 w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center rounded-xl bg-white/5 group-hover:shadow-[0_0_25px_rgba(255,255,255,0.15)] transition">
+                    <Icon className={`w-6 h-6 sm:w-7 sm:h-7 ${p.color}`} />
                   </div>
                   <h3 className="font-semibold text-sm sm:text-base">
                     {p.title}

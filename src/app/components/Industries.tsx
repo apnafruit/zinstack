@@ -112,17 +112,17 @@ const industries: Industry[] = [
 
 export default function Industries() {
   return (
-    <section id="industries" className="py-16 px-6 lg:px-12">
+    <section id="industries" className="py-12 sm:py-16 px-4 sm:px-6 lg:px-12">
       <div className="max-w-[1440px] mx-auto">
         {/* Heading */}
-        <div className="text-center mb-14">
-          <p className="text-2xl text-white max-w-5xl mx-auto">
+        <div className="text-center mb-10">
+          <p className="text-lg sm:text-xl text-white max-w-3xl mx-auto">
             Tailored digital systems designed for industry-specific challenges.
           </p>
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {industries.map((ind) => {
             const Icon = ind.icon;
 
@@ -143,12 +143,12 @@ export default function Industries() {
                 "
               >
                 {/* Card */}
-                <article className="p-6 bg-[#0E1320] border border-white/6 rounded-2xl cursor-pointer transition hover:border-white/12">
-                  <div className="mb-4 w-14 h-14 flex items-center justify-center rounded-xl bg-white/5 group-hover:shadow-[0_0_25px_rgba(255,255,255,0.15)] transition">
-                    <Icon className={`w-7 h-7 ${ind.color}`} />
+                <article className="p-4 sm:p-6 bg-[#0E1320] border border-white/6 rounded-2xl cursor-pointer transition hover:border-white/12">
+                  <div className="mb-3 w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center rounded-xl bg-white/5 group-hover:shadow-[0_0_25px_rgba(255,255,255,0.15)] transition">
+                    <Icon className={`w-6 h-6 sm:w-7 sm:h-7 ${ind.color}`} />
                   </div>
 
-                  <h3 className="font-bold text-lg mb-1">{ind.title}</h3>
+                  <h3 className="font-bold text-base sm:text-lg mb-1">{ind.title}</h3>
 
                   {ind.subtitle && (
                     <div className="text-sm text-[#9AA4B2]">

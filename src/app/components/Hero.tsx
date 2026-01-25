@@ -63,7 +63,7 @@ export default function Hero() {
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.8 }}
-          className="mt-6 max-w-xl text-white/70 text-[clamp(15px,2.5vw,18px)]"
+          className="mt-6 max-w-xl text-white/70 text-[clamp(13px,2.2vw,16px)] sm:text-[clamp(15px,2.5vw,18px)]"
         >
           Strategic digital products and platforms for scalable businesses.
           We build reliable systems that you own.
@@ -85,21 +85,21 @@ export default function Hero() {
           "
         >
           <div className="flex items-baseline gap-2">
-            <span className="text-2xl font-bold text-white">30+</span>
+            <span className="text-xl sm:text-2xl font-bold text-white">30+</span>
             <span className="text-sm text-white/60">Projects</span>
           </div>
 
           <div className="w-px h-6 bg-white/10 hidden sm:block" />
 
           <div className="flex items-baseline gap-2">
-            <span className="text-2xl font-bold text-white">60+</span>
+            <span className="text-xl sm:text-2xl font-bold text-white">60+</span>
             <span className="text-sm text-white/60">Members</span>
           </div>
 
           <div className="w-px h-6 bg-white/10 hidden sm:block" />
 
           <div className="flex items-baseline gap-2">
-            <span className="text-2xl font-bold text-white">2+</span>
+            <span className="text-xl sm:text-2xl font-bold text-white">2+</span>
             <span className="text-sm text-white/60">Years</span>
           </div>
         </motion.div>

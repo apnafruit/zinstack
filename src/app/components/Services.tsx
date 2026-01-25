@@ -150,24 +150,23 @@ export default function Services() {
   ];
 
   return (
-    <section className="py-24 lg:py-32 px-6 lg:px-12 relative overflow-hidden bg-black">
+    <section className="py-16 sm:py-20 lg:py-32 px-4 sm:px-6 lg:px-12 relative overflow-hidden bg-black">
       <div className="max-w-[1440px] mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-12"
         >
           <p 
-            className="text-3xl text-white text-bold"
+            className="text-2xl sm:text-3xl text-white font-semibold"
             style={{ fontFamily: "'sora', sans-serif" }}
           >
             End-to-end solutions for modern web experiences
           </p>
         </motion.div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
@@ -178,15 +177,15 @@ export default function Services() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.3, delay: index * 0.1 }}
                 whileHover={{ y: -5 }}
-                className="bg-[#1A1F2C]/50 border border-[#9AA4B2]/10 rounded-xl p-8 space-y-6 transition-all hover:border-[#3B82F6]/30 hover:shadow-[0_0_30px_rgba(59,130,246,0.1)] cursor-pointer"
+                className="bg-[#1A1F2C]/50 border border-[#9AA4B2]/10 rounded-xl p-6 sm:p-6 md:p-8 space-y-5 transition-all hover:border-[#3B82F6]/30 hover:shadow-[0_0_30px_rgba(59,130,246,0.1)] cursor-pointer min-h-[140px]"
               >
-                <div className="w-14 h-14 rounded-lg bg-[#3B82F6]/10 flex items-center justify-center">
-                  <Icon className="w-7 h-7 text-[#3B82F6]" />
+                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-lg bg-[#3B82F6]/10 flex items-center justify-center">
+                  <Icon className="w-6 h-6 sm:w-7 sm:h-7 text-[#3B82F6]" />
                 </div>
                 
                 <div className="space-y-3">
                   <h3 
-                    className="text-xl"
+                    className="text-lg sm:text-xl"
                     style={{ fontFamily: "'Space Grotesk', sans-serif", fontWeight: 600 }}
                   >
                     {service.title}

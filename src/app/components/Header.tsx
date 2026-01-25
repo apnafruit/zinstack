@@ -39,10 +39,10 @@ export default function Header() {
           >
             <a
               href="#"
-              className="flex items-center gap-2 text-xl text-[#EDEFF2] hover:text-[#3B82F6] transition-colors"
+              className="flex items-center gap-2 text-sm sm:text-base text-[#EDEFF2] hover:text-[#3B82F6] transition-colors"
             >
-              <img src="/zslogo.svg" alt="ZS Logo" className="w-12 h-12" />
-              <span>ZIVSTACK</span>
+              <img src="/zslogo.svg" alt="ZS Logo" className="w-10 h-10 sm:w-12 sm:h-12 object-contain" />
+              <span className="truncate">ZIVSTACK</span>
             </a>
           </motion.div>
 
@@ -71,6 +71,7 @@ export default function Header() {
                 group
                 flex items-center
                 h-10
+                min-h-[44px] min-w-[44px]
                 px-3
                 rounded-full
                 border border-white/20
@@ -127,10 +128,11 @@ export default function Header() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-[#EDEFF2] p-2 rounded-md"
+            className="md:hidden text-[#EDEFF2] p-3 rounded-md min-h-[44px] min-w-[44px]"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle navigation"
           >
-            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {mobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
           </button>
         </div>
 
@@ -145,7 +147,7 @@ export default function Header() {
               <a
                 key={index}
                 href={item.href}
-                className="block text-[#9AA4B2] hover:text-[#EDEFF2] py-3 px-2"
+                className="block text-[#9AA4B2] hover:text-[#EDEFF2] py-3 px-4 text-base rounded-md"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {item.label}
