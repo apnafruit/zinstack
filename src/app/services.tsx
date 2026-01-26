@@ -37,11 +37,19 @@ export default function ServicesPage() {
             <div className="absolute inset-0 bg-black/50" />
 
             {/* Content */}
-            <div className="relative z-10 max-w-7xl mx-auto px-3 xs:px-4 sm:px-6 md:px-8 lg:px-12 text-center py-12 sm:py-0">
+            <div className="relative z-10 max-w-4xl mx-auto px-3 xs:px-4 sm:px-6 md:px-8 lg:px-12 text-center py-12 sm:py-0 space-y-4 sm:space-y-6">
               <div className="inline-flex items-center justify-center px-5 sm:px-8 py-4 sm:py-5 md:py-6 bg-white/5 backdrop-blur-md rounded-full border border-white/10 shadow-[0_0_40px_rgba(59,130,246,0.15)]">
                 <span className="text-[clamp(24px,5vw,56px)] font-extrabold tracking-[0.15em] sm:tracking-[0.25em] uppercase text-white/90">
                   Our&nbsp;Services
                 </span>
+              </div>
+              <div className="space-y-2 sm:space-y-3">
+                <h2 className="text-xl sm:text-xl md:text-2xl font-bold text-white">
+                  Custom Website Development Services in India | Zivstack
+                </h2>
+                <p className="text-white/70 text-xs sm:text-sm md:text-base leading-relaxed">
+                  Professional custom website development services in India for startups, brands, and businesses. Scalable, secure, and high-performance websites.
+                </p>
               </div>
             </div>
           </div>

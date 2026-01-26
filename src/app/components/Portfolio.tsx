@@ -151,11 +151,7 @@ export default function Portfolio() {
 
                     <h3 className="text-lg md:text-2xl font-semibold">
                       {project.title}
-                    </h3>
-
-                    <p className="text-xs md:text-sm text-[#9AA4B2]">
-                      {project.result}
-                    </p>
+                    </h3> 
                   </div>
                 </div>
 
