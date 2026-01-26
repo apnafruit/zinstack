@@ -13,6 +13,7 @@ import WhatsAppButton from '@/app/components/WhatsAppButton';
 import About from '@/app/About';
 import Work from '@/app/work';
 import Blog from '@/app/blog';
+import Contact from '@/app/contact';
 import ServicesPage from '@/app/services';
 import { useEffect, useState } from 'react';
 
@@ -72,23 +73,22 @@ export default function App() {
           <Work />
         ) : route === '/blog' ? (
           <Blog />
+        ) : route === '/contact' ? (
+          <Contact />
         ) : route === '/services' ? (
           <ServicesPage />
         ) : (
           <>
             <Hero />
             <ProblemSolution />
-            <section id="services">
-              <Services />
-            </section>
             <section id="work">
-              <Portfolio />
+            <section id="products">
+              <Products />
             </section>
             <section id="industries">
               <Industries />
             </section>
-            <section id="products">
-              <Products />
+              <Portfolio />
             </section>
             <TechStack />
             <Testimonials />
@@ -98,7 +98,6 @@ export default function App() {
           </>
         )}
       </main>
-      <ScrollToTop />
       <WhatsAppButton />
     </div>
   );

@@ -150,23 +150,24 @@ export default function Services() {
   ];
 
   return (
-    <section className="py-16 sm:py-20 lg:py-32 px-4 sm:px-6 lg:px-12 relative overflow-hidden bg-gradient-to-b from-black via-[#0b1d3a]/80 to-white">
+    <section className="py-12 sm:py-16 md:py-20 lg:py-32 px-3 xs:px-4 sm:px-6 md:px-8 lg:px-12 relative overflow-hidden bg-[linear-gradient(180deg,_#0B0F14_0%,_#0B0F14_65%,_#07090d_85%,_#000000_100%)]">
+
       <div className="max-w-[1440px] mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12"
+          className="text-center mb-10 sm:mb-12 md:mb-16"
         >
           <p 
-            className="text-2xl sm:text-3xl text-white font-semibold"
+            className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-white font-semibold px-2"
             style={{ fontFamily: "'sora', sans-serif" }}
           >
             End-to-end solutions for modern web experiences
           </p>
         </motion.div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4 md:gap-5 lg:gap-6">
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
@@ -177,36 +178,36 @@ export default function Services() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.3, delay: index * 0.1 }}
                 whileHover={{ y: -5 }}
-                className="bg-[#1A1F2C]/20 border border-[#9AA4B2]/10 rounded-xl p-6 sm:p-6 md:p-8 space-y-5 transition-all hover:border-[#3B82F6]/30 hover:shadow-[0_0_30px_rgba(59,130,246,0.1)] cursor-pointer min-h-[140px]"
+                className="bg-[#1A1F2C]/20 border border-[#9AA4B2]/10 rounded-lg sm:rounded-xl p-4 sm:p-5 md:p-6 lg:p-8 space-y-3 sm:space-y-4 md:space-y-5 transition-all hover:border-[#3B82F6]/30 hover:shadow-[0_0_30px_rgba(59,130,246,0.1)] cursor-pointer min-h-fit"
               >
-                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-lg bg-[#3B82F6]/10 flex items-center justify-center">
-                  <Icon className="w-6 h-6 sm:w-7 sm:h-7 text-[#3B82F6]" />
+                <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-lg bg-[#3B82F6]/10 flex items-center justify-center flex-shrink-0">
+                  <Icon className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-[#3B82F6]" />
                 </div>
                 
-                <div className="space-y-3">
+                <div className="space-y-2 sm:space-y-3">
                   <h3 
-                    className="text-lg sm:text-xl"
-                    style={{ fontFamily: "'Space Grotesk', sans-serif", fontWeight: 600 }}
+                    className="text-base sm:text-lg md:text-xl font-semibold leading-tight"
+                    style={{ fontFamily: "'Space Grotesk', sans-serif" }}
                   >
                     {service.title}
                   </h3>
                   <p 
-                    className="text-white text-sm leading-relaxed"
+                    className="text-white text-xs sm:text-sm md:text-base leading-relaxed"
                     style={{ fontFamily: "'Inter', sans-serif" }}
                   >
                     {service.description}
                   </p>
                 </div>
 
-                <ul className="space-y-2">
+                <ul className="space-y-1.5 sm:space-y-2">
                   {service.outcomes.map((outcome, i) => (
                     <li 
                       key={i}
-                      className="text-sm text-white flex items-center gap-2"
+                      className="text-xs sm:text-sm text-white flex items-start gap-2"
                       style={{ fontFamily: "'Inter', sans-serif" }}
                     >
-                      <span className="w-1 h-1 rounded-full bg-[#3B82F6]" />
-                      {outcome}
+                      <span className="w-0.5 h-0.5 sm:w-1 sm:h-1 rounded-full bg-[#3B82F6] mt-1.5 flex-shrink-0" />
+                      <span>{outcome}</span>
                     </li>
                   ))}
                 </ul>
