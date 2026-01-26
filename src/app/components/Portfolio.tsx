@@ -27,7 +27,7 @@ export default function Portfolio() {
   ];
 
   return (
-    <section className="py-24 lg:py-32 px-6 lg:px-12">
+    <section className="py-24 lg:py-32 px-6 lg:px-12 bg-white">
       <div className="max-w-[1440px] mx-auto">
         {/* Header */}
         <motion.div
@@ -37,7 +37,7 @@ export default function Portfolio() {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl mb-4 font-bold">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl mb-4 font-bold text-gray-500">
             20+ websites built for growing brands.
           </h2>
           <p className="text-lg text-[#9AA4B2] max-w-2xl">

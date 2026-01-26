@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 
 export default function FinalCTA() {
   return (
-    <section className="w-full bg-[#0B0F14] py-16 sm:py-20 lg:py-32">
+    <section className="w-full bg-[#0B0F14] py-16 sm:py-20 lg:py-32 bg-black">
       <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

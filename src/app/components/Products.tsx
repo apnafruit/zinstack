@@ -125,10 +125,13 @@ const products: Product[] = [
 
 export default function Products() {
   return (
-    <section id="products" className="py-12 sm:py-16 px-4 sm:px-6 lg:px-12 bg-black">
+    <section
+      id="products"
+      className="py-12 sm:py-16 px-4 sm:px-6 lg:px-12 bg-white"
+    >
       <div className="max-w-[1440px] mx-auto">
         <div className="text-center mb-10">
-          <h2 className="text-lg sm:text-2xl md:text-3xl">
+          <h2 className="text-lg sm:text-2xl md:text-3xl text-gray-600">
             Affordable ERP, CRM, POS, and HRMS — built to launch fast
           </h2>
         </div>
@@ -149,11 +152,34 @@ export default function Products() {
                 "
               >
                 {/* Card */}
-                <article className="bg-[#0E1320] border border-white/6 rounded-2xl p-4 sm:p-6 flex flex-col items-center text-center cursor-pointer transition hover:border-white/12">
-                  <div className="mb-3 w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center rounded-xl bg-white/5 group-hover:shadow-[0_0_25px_rgba(255,255,255,0.15)] transition">
+                <article
+                  className="
+                    bg-[#1A1F2C]/5
+                    border border-black/10
+                    rounded-2xl
+                    p-4 sm:p-6
+                    flex flex-col items-center text-center
+                    cursor-pointer
+                    transition
+                    hover:border-black/20
+                    hover:bg-[#1A1F2C]/10
+                  "
+                >
+                  <div
+                    className="
+                      mb-3
+                      w-12 h-12 sm:w-14 sm:h-14
+                      flex items-center justify-center
+                      rounded-xl
+                      bg-black/5
+                      group-hover:shadow-[0_0_20px_rgba(0,0,0,0.08)]
+                      transition
+                    "
+                  >
                     <Icon className={`w-6 h-6 sm:w-7 sm:h-7 ${p.color}`} />
                   </div>
-                  <h3 className="font-semibold text-sm sm:text-base">
+
+                  <h3 className="font-semibold text-sm sm:text-base text-gray-900">
                     {p.title}
                   </h3>
                 </article>
@@ -164,7 +190,10 @@ export default function Products() {
                     hover-box
                     absolute top-1/2 left-full -translate-y-1/2 ml-4
                     w-72 min-h-[16rem] max-h-[28rem]
-                    bg-[#0E1320] border border-white/10 rounded-2xl p-5
+                    bg-white
+                    border border-black/10
+                    rounded-2xl
+                    p-5
                     opacity-0 scale-95 pointer-events-none
                     transition-all duration-200 ease-out
                     group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto
@@ -173,18 +202,25 @@ export default function Products() {
                 >
                   <div className="flex items-center gap-3 mb-3">
                     <Icon className={`w-6 h-6 ${p.color}`} />
-                    <span className="font-semibold text-white">{p.title}</span>
+                    <span className="font-semibold text-gray-900">
+                      {p.title}
+                    </span>
                   </div>
 
-                  <p className="text-xs text-white/70 mb-4 leading-relaxed">
+                  <p className="text-xs text-gray-600 mb-4 leading-relaxed">
                     {p.description}
                   </p>
 
                   <div className="mb-4">
-                    <div className="text-xs font-semibold mb-1">Solutions</div>
+                    <div className="text-xs font-semibold mb-1 text-gray-800">
+                      Solutions
+                    </div>
                     <div className="flex flex-wrap gap-1.5">
                       {p.solutions.map((s, i) => (
-                        <span key={i} className="px-2 py-0.5 rounded bg-white/5 text-xs">
+                        <span
+                          key={i}
+                          className="px-2 py-0.5 rounded bg-black/5 text-xs text-gray-700"
+                        >
                           {s}
                         </span>
                       ))}
@@ -192,16 +228,20 @@ export default function Products() {
                   </div>
 
                   <div className="mb-4">
-                    <div className="text-xs font-semibold mb-1">Key Benefits</div>
-                    <ul className="text-xs text-white/70 list-disc list-inside space-y-1">
+                    <div className="text-xs font-semibold mb-1 text-gray-800">
+                      Key Benefits
+                    </div>
+                    <ul className="text-xs text-gray-600 list-disc list-inside space-y-1">
                       {p.benefits.map((b, i) => (
                         <li key={i}>{b}</li>
                       ))}
                     </ul>
                   </div>
 
-                  <div className="text-xs text-white/60 mt-auto">
-                    <span className="font-semibold text-white">Best for:</span>{" "}
+                  <div className="text-xs text-gray-600 mt-auto">
+                    <span className="font-semibold text-gray-900">
+                      Best for:
+                    </span>{" "}
                     {p.bestFor.join(" • ")}
                   </div>
                 </div>

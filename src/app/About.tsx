@@ -53,7 +53,7 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="bg-[#050B1A] text-white">
+    <section id="about" className="bg-[#050B1A] text-white overflow-x-hidden">
       {/* Hero Banner */}
       <div className="relative min-h-[60vh] sm:min-h-[70vh] flex items-center justify-center bg-gradient-to-b from-blue-900/10 via-[#050B1A] to-[#050B1A] overflow-hidden">
   {/* Ambient background */}
@@ -88,12 +88,12 @@ export default function About() {
         <div className="mb-16 sm:mb-24 bg-gradient-to-br from-white/3 via-blue-500/3 to-transparent rounded-3xl border border-white/6 p-8 sm:p-12 lg:p-16">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
             <div className="lg:col-span-4">
-              <div className="w-32 h-32 sm:w-40 sm:h-40 rounded-full bg-gradient-to-br from-white/10 to-blue-500/10 border border-white/10 flex items-center justify-center text-3xl sm:text-4xl font-bold mb-8">
+              <div className="w-20 h-20 sm:w-28 sm:h-28 md:w-40 md:h-40 rounded-full bg-gradient-to-br from-white/10 to-blue-500/10 border border-white/10 flex items-center justify-center text-xl sm:text-2xl md:text-3xl font-bold mb-6 sm:mb-8">
                 KN
               </div>
               
-              <h3 className="font-bold text-2xl sm:text-3xl md:text-4xl">K. Niklesh</h3>
-              <p className="mt-2 text-lg text-white/70">Founder & Chief Architect</p>
+              <h3 className="font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl">K. Niklesh</h3>
+              <p className="mt-2 text-base sm:text-lg md:text-xl text-white/70">Founder & Chief Architect</p>
               
               <div className="mt-6 inline-flex items-center gap-3 px-6 py-3 bg-white/5 rounded-full">
                 <span className="w-2 h-2 bg-green-500 rounded-full"></span>
@@ -102,15 +102,15 @@ export default function About() {
             </div>
             
             <div className="lg:col-span-8">
-              <p className="text-lg sm:text-xl text-white/80 leading-relaxed mb-8">
+              <p className="text-base sm:text-lg md:text-xl text-white/80 leading-relaxed mb-8">
                 K. Niklesh founded ZIVSTACK to help teams ship dependable, maintainable platforms that scale. 
                 With decades of product and engineering experience across multiple industries, Niklesh focuses 
                 on product strategy, system architecture, and building elite teams that deliver exceptional results.
               </p>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
                 <div>
-                  <h4 className="font-semibold text-xl mb-4 text-white">Core Philosophy</h4>
+                  <h4 className="font-semibold text-lg sm:text-xl mb-4 text-white">Core Philosophy</h4>
                   <ul className="space-y-4 text-white/70">
                     <li className="flex items-start gap-3">
                       <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mt-2 flex-shrink-0"></span>
@@ -128,7 +128,7 @@ export default function About() {
                 </div>
                 
                 <div>
-                  <h4 className="font-semibold text-xl mb-4 text-white">Location & Focus</h4>
+                  <h4 className="font-semibold text-lg sm:text-xl mb-4 text-white">Location & Focus</h4>
                   <div className="space-y-4">
                     <div className="flex items-center gap-4">
                       <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center">
@@ -156,19 +156,19 @@ export default function About() {
         </div>
 
         {/* Mission & Values - Side by Side */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16 sm:mb-24">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 mb-12 sm:mb-20">
           {/* Our Mission */}
           <div className="bg-gradient-to-br from-white/3 via-blue-500/3 to-transparent rounded-3xl border border-white/6 p-8 sm:p-12">
             <div className="inline-block px-4 py-2 bg-white/5 rounded-full mb-8">
               <span className="text-sm font-medium tracking-wider">OUR MISSION</span>
             </div>
             
-            <h3 className="font-bold text-3xl sm:text-4xl mb-6">Building Digital Foundations</h3>
+            <h3 className="font-bold text-2xl sm:text-3xl md:text-4xl mb-6">Building Digital Foundations</h3>
             
             <div className="space-y-6">
               <div>
-                <h4 className="font-semibold text-xl mb-3 text-white">Strategic Approach</h4>
-                <p className="text-white/70 leading-relaxed">
+                <h4 className="font-semibold text-lg sm:text-xl mb-3 text-white">Strategic Approach</h4>
+                <p className="text-white/70 leading-relaxed text-sm sm:text-base">
                   Every project begins with understanding business objectives, user needs, and technical 
                   constraints before writing a single line of code. We prioritize long-term value over 
                   short-term gains.
@@ -200,12 +200,12 @@ export default function About() {
               <span className="text-sm font-medium tracking-wider">CORE VALUES</span>
             </div>
             
-            <h3 className="font-bold text-3xl sm:text-4xl mb-6">Principles That Guide Us</h3>
+            <h3 className="font-bold text-2xl sm:text-3xl md:text-4xl mb-6">Principles That Guide Us</h3>
             
             <div className="space-y-6">
               <div>
-                <h4 className="font-semibold text-xl mb-3 text-white">Engineering Craft</h4>
-                <p className="text-white/70 leading-relaxed">
+                <h4 className="font-semibold text-lg sm:text-xl mb-3 text-white">Engineering Craft</h4>
+                <p className="text-white/70 leading-relaxed text-sm sm:text-base">
                   Clear UX, robust code, and exceptional attention to detail in every aspect of our work. 
                   We believe in building with care and precision.
                 </p>
@@ -231,18 +231,18 @@ export default function About() {
         </div>
 
         {/* Process Section with Vertical Progress */}
-        <div className="mb-16 sm:mb-24">
+        <div className="mb-12 sm:mb-20">
           <div className="text-center mb-12">
             <div className="inline-block px-4 py-2 bg-white/5 rounded-full mb-6">
               <span className="text-sm font-medium tracking-wider">OUR PROCESS</span>
             </div>
-            <h3 className="font-bold text-3xl sm:text-4xl">How We Build Excellence</h3>
+            <h3 className="font-bold text-2xl sm:text-3xl md:text-4xl">How We Build Excellence</h3>
           </div>
 
           <div ref={processRef} className="relative">
             {/* Vertical Glowing Line */}
             <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full">
-              <div className="relative w-full h-full">
+                <div className="relative w-full h-full">
                 {/* Background line */}
                 <div className="absolute inset-0 bg-white/10 rounded-full"></div>
                 {/* Animated glow */}
@@ -270,27 +270,20 @@ export default function About() {
                 {/* Current Step Display */}
                 <div className="lg:sticky lg:top-24 h-fit">
                   <div className="mb-6 flex items-center justify-center">
-                    <div className="flex items-center justify-center rounded-full bg-white/6 border border-white/10 text-white/20"
-                      style={{
-                        width: '5.5rem',
-                        height: '5.5rem'
-                      }}
-                    >
-                      <span className="text-3xl sm:text-4xl lg:text-5xl font-black">
-                        {steps[activeStep].number}
-                      </span> 
+                    <div className="flex items-center justify-center rounded-full bg-white/6 border border-white/10 text-white/20 w-14 h-14 sm:w-20 sm:h-20 lg:w-24 lg:h-24">
+                      <span className="text-xl sm:text-2xl lg:text-4xl font-black">{steps[activeStep].number}</span>
                     </div>
                   </div>
-                  <h3 className="font-bold text-3xl sm:text-4xl mb-6">
+                  <h3 className="font-bold text-2xl sm:text-3xl md:text-4xl mb-4">
                     {steps[activeStep].title}
                   </h3>
-                  <p className="text-lg text-white/70 leading-relaxed">
+                  <p className="text-base sm:text-lg text-white/70 leading-relaxed">
                     {steps[activeStep].description}
                   </p>
                 </div>
 
                 {/* Step Indicators */}
-                <div className="space-y-8">
+                <div className="space-y-6">
                   {steps.map((step, index) => (
                     <div 
                       key={index}
@@ -301,26 +294,22 @@ export default function About() {
                       }`}
                       onClick={() => setActiveStep(index)}
                     >
-<div className="flex items-center gap-6">
-  <div
-    className={`w-24 aspect-square rounded-full flex items-center justify-center
-      text-2xl font-bold leading-none
-      transition-all duration-300 ${
-        index === activeStep 
-          ? index === 0 ? 'bg-blue-500/20 text-blue-400 border border-blue-500/30' :
-            index === 1 ? 'bg-purple-500/20 text-purple-400 border border-purple-500/30' :
-            index === 2 ? 'bg-green-500/20 text-green-400 border border-green-500/30' :
-            'bg-yellow-500/20 text-yellow-400 border border-yellow-500/30'
-          : 'bg-white/5 text-white/40'
-      }`}
-  >
-    {step.number}
-  </div>
+                      <div className="flex items-center gap-4">
+                        <div
+                          className={`w-12 sm:w-16 lg:w-24 aspect-square rounded-full flex items-center justify-center text-lg sm:text-2xl font-bold leading-none transition-all duration-300 ${
+                            index === activeStep 
+                              ? index === 0 ? 'bg-blue-500/20 text-blue-400 border border-blue-500/30' :
+                                index === 1 ? 'bg-purple-500/20 text-purple-400 border border-purple-500/30' :
+                                index === 2 ? 'bg-green-500/20 text-green-400 border border-green-500/30' :
+                                'bg-yellow-500/20 text-yellow-400 border border-yellow-500/30'
+                              : 'bg-white/5 text-white/40'
+                          }`}
+                        >
+                          {step.number}
+                        </div>
                         <div>
-                          <h4 className="font-semibold text-xl mb-2">{step.title}</h4>
-                          <p className="text-white/60 text-sm leading-relaxed">
-                            {step.description.substring(0, 100)}...
-                          </p>
+                          <h4 className="font-semibold text-lg sm:text-xl mb-2">{step.title}</h4>
+                          <p className="text-white/60 text-sm sm:text-sm leading-relaxed">{step.description.substring(0, 100)}...</p>
                         </div>
                       </div>
                     </div>
@@ -332,12 +321,12 @@ export default function About() {
         </div>
 
         {/* CTA Section */}
-        <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-[#050B1A] via-[#0A1430] to-[#050B1A] p-8 sm:p-12 lg:p-16">
+        <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-[#050B1A] via-[#0A1430] to-[#050B1A] p-6 sm:p-10 lg:p-16">
   {/* Background accents */}
   <div className="absolute -top-20 -right-20 w-64 h-64 bg-blue-500/5 rounded-full blur-3xl"></div>
   <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-purple-500/5 rounded-full blur-3xl"></div>
   
-  <div className="relative max-w-4xl mx-auto">
+  <div className="relative max-w-4xl mx-auto px-4">
     {/* Header with accent */}
     <div className="flex flex-col items-center mb-10">
       <div className="inline-flex items-center gap-3 px-5 py-2.5 bg-white/5 backdrop-blur-sm rounded-full border border-white/10 mb-8">
@@ -353,7 +342,7 @@ export default function About() {
     </div>
 
     {/* Main content */}
-    <div className="grid lg:grid-cols-2 gap-10 items-center mb-12">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mb-10">
       {/* Left side - Statement */}
       <div className="space-y-6">
         <div className="flex items-start gap-4">
@@ -386,26 +375,21 @@ export default function About() {
       </div>
 
       {/* Right side - Contact info */}
-      <div className="bg-white/3 backdrop-blur-sm rounded-2xl border border-white/10 p-8">
-        <h4 className="font-bold text-2xl mb-6 text-center">Get in Touch</h4>
+      <div className="bg-white/3 backdrop-blur-sm rounded-2xl border border-white/10 p-6 sm:p-8">
+        <h4 className="font-bold text-xl sm:text-2xl mb-6 text-center">Get in Touch</h4>
         
         <div className="space-y-6">
           <div className="text-center">
-            <div className="inline-flex items-center gap-3 px-5 py-3 bg-white/5 rounded-xl border border-white/10">
+            <div className="inline-flex items-center gap-3 px-4 py-2.5 bg-white/5 rounded-xl border border-white/10 min-h-[44px] min-w-[44px]">
               <svg className="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
-              <a 
-                href="mailto:contact@zivstack.in" 
-                className="text-lg font-medium hover:text-blue-300 transition-colors duration-300"
-              >
-                contact@zivstack.in
-              </a>
+              <a href="mailto:contact@zivstack.in" className="text-base sm:text-lg font-medium hover:text-blue-300 transition-colors duration-300 inline-flex items-center">contact@zivstack.in</a>
             </div>
           </div>
           
           <div className="text-center">
-            <div className="inline-flex items-center gap-3 px-5 py-3 bg-white/5 rounded-xl border border-white/10">
+            <div className="inline-flex items-center gap-3 px-4 py-2.5 bg-white/5 rounded-xl border border-white/10 min-h-[44px]">
               <svg className="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
               </svg>

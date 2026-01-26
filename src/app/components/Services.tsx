@@ -150,7 +150,7 @@ export default function Services() {
   ];
 
   return (
-    <section className="py-16 sm:py-20 lg:py-32 px-4 sm:px-6 lg:px-12 relative overflow-hidden bg-black">
+    <section className="py-16 sm:py-20 lg:py-32 px-4 sm:px-6 lg:px-12 relative overflow-hidden bg-gradient-to-b from-black via-[#0b1d3a]/80 to-white">
       <div className="max-w-[1440px] mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -177,7 +177,7 @@ export default function Services() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.3, delay: index * 0.1 }}
                 whileHover={{ y: -5 }}
-                className="bg-[#1A1F2C]/50 border border-[#9AA4B2]/10 rounded-xl p-6 sm:p-6 md:p-8 space-y-5 transition-all hover:border-[#3B82F6]/30 hover:shadow-[0_0_30px_rgba(59,130,246,0.1)] cursor-pointer min-h-[140px]"
+                className="bg-[#1A1F2C]/20 border border-[#9AA4B2]/10 rounded-xl p-6 sm:p-6 md:p-8 space-y-5 transition-all hover:border-[#3B82F6]/30 hover:shadow-[0_0_30px_rgba(59,130,246,0.1)] cursor-pointer min-h-[140px]"
               >
                 <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-lg bg-[#3B82F6]/10 flex items-center justify-center">
                   <Icon className="w-6 h-6 sm:w-7 sm:h-7 text-[#3B82F6]" />
@@ -191,7 +191,7 @@ export default function Services() {
                     {service.title}
                   </h3>
                   <p 
-                    className="text-[#9AA4B2] text-sm leading-relaxed"
+                    className="text-white text-sm leading-relaxed"
                     style={{ fontFamily: "'Inter', sans-serif" }}
                   >
                     {service.description}
@@ -202,7 +202,7 @@ export default function Services() {
                   {service.outcomes.map((outcome, i) => (
                     <li 
                       key={i}
-                      className="text-sm text-[#9AA4B2] flex items-center gap-2"
+                      className="text-sm text-white flex items-center gap-2"
                       style={{ fontFamily: "'Inter', sans-serif" }}
                     >
                       <span className="w-1 h-1 rounded-full bg-[#3B82F6]" />

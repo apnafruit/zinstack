@@ -35,7 +35,11 @@ const industries: Industry[] = [
       "Telemedicine platforms",
       "Patient scheduling",
     ],
-    benefits: ["Improve patient care", "Streamline operations", "HIPAA compliance"],
+    benefits: [
+      "Improve patient care",
+      "Streamline operations",
+      "HIPAA compliance",
+    ],
     technologies: ["HL7 FHIR", "DICOM", "AI Diagnostics"],
   },
   {
@@ -44,7 +48,11 @@ const industries: Industry[] = [
     subtitle: "E-Commerce Industry Solutions",
     icon: ShoppingCart,
     color: "text-indigo-400",
-    solutions: ["B2C & B2B platforms", "Marketplace development", "Payment integrations"],
+    solutions: [
+      "B2C & B2B platforms",
+      "Marketplace development",
+      "Payment integrations",
+    ],
     benefits: ["Increase online sales", "Personalized shopping"],
     technologies: ["Shopify", "WooCommerce", "Stripe"],
   },
@@ -64,7 +72,11 @@ const industries: Industry[] = [
     subtitle: "Education Industry Solutions",
     icon: GraduationCap,
     color: "text-yellow-400",
-    solutions: ["Learning Management Systems", "Virtual classrooms", "Online exams"],
+    solutions: [
+      "Learning Management Systems",
+      "Virtual classrooms",
+      "Online exams",
+    ],
     benefits: ["Remote learning", "Performance tracking"],
     technologies: ["Cloud LMS", "Video Streaming"],
   },
@@ -112,11 +124,14 @@ const industries: Industry[] = [
 
 export default function Industries() {
   return (
-    <section id="industries" className="py-12 sm:py-16 px-4 sm:px-6 lg:px-12">
+    <section
+      id="industries"
+      className="py-12 sm:py-16 px-4 sm:px-6 lg:px-12 bg-white"
+    >
       <div className="max-w-[1440px] mx-auto">
         {/* Heading */}
         <div className="text-center mb-10">
-          <p className="text-lg sm:text-xl text-white max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
             Tailored digital systems designed for industry-specific challenges.
           </p>
         </div>
@@ -143,15 +158,38 @@ export default function Industries() {
                 "
               >
                 {/* Card */}
-                <article className="p-4 sm:p-6 bg-[#0E1320] border border-white/6 rounded-2xl cursor-pointer transition hover:border-white/12">
-                  <div className="mb-3 w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center rounded-xl bg-white/5 group-hover:shadow-[0_0_25px_rgba(255,255,255,0.15)] transition">
+                <article
+                  className="
+                    p-4 sm:p-6
+                    bg-[#1A1F2C]/5
+                    border border-black/10
+                    rounded-2xl
+                    cursor-pointer
+                    transition
+                    hover:border-black/20
+                    hover:bg-[#1A1F2C]/10
+                  "
+                >
+                  <div
+                    className="
+                      mb-3
+                      w-12 h-12 sm:w-14 sm:h-14
+                      flex items-center justify-center
+                      rounded-xl
+                      bg-black/5
+                      group-hover:shadow-[0_0_20px_rgba(0,0,0,0.08)]
+                      transition
+                    "
+                  >
                     <Icon className={`w-6 h-6 sm:w-7 sm:h-7 ${ind.color}`} />
                   </div>
 
-                  <h3 className="font-bold text-base sm:text-lg mb-1">{ind.title}</h3>
+                  <h3 className="font-bold text-base sm:text-lg mb-1 text-gray-900">
+                    {ind.title}
+                  </h3>
 
                   {ind.subtitle && (
-                    <div className="text-sm text-[#9AA4B2]">
+                    <div className="text-sm text-gray-600">
                       {ind.subtitle}
                     </div>
                   )}
@@ -163,7 +201,10 @@ export default function Industries() {
                     hover-box
                     absolute top-1/2 left-full -translate-y-1/2 ml-4
                     w-72 min-h-[16rem] max-h-[28rem]
-                    bg-[#0E1320] border border-white/10 rounded-2xl p-5
+                    bg-white
+                    border border-black/10
+                    rounded-2xl
+                    p-5
                     opacity-0 scale-95 pointer-events-none
                     transition-all duration-200 ease-out
                     group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto
@@ -172,12 +213,16 @@ export default function Industries() {
                 >
                   <div className="flex items-center gap-3 mb-3">
                     <Icon className={`w-6 h-6 ${ind.color}`} />
-                    <span className="font-semibold text-white">{ind.title}</span>
+                    <span className="font-semibold text-gray-900">
+                      {ind.title}
+                    </span>
                   </div>
 
                   <div className="mb-4">
-                    <div className="text-xs font-semibold mb-1">Solutions</div>
-                    <ul className="list-disc list-inside text-xs text-white/70 space-y-1">
+                    <div className="text-xs font-semibold mb-1 text-gray-800">
+                      Solutions
+                    </div>
+                    <ul className="list-disc list-inside text-xs text-gray-600 space-y-1">
                       {ind.solutions.map((s, i) => (
                         <li key={i}>{s}</li>
                       ))}
@@ -185,8 +230,10 @@ export default function Industries() {
                   </div>
 
                   <div className="mb-4">
-                    <div className="text-xs font-semibold mb-1">Key Benefits</div>
-                    <ul className="list-disc list-inside text-xs text-white/70 space-y-1">
+                    <div className="text-xs font-semibold mb-1 text-gray-800">
+                      Key Benefits
+                    </div>
+                    <ul className="list-disc list-inside text-xs text-gray-600 space-y-1">
                       {ind.benefits.map((b, i) => (
                         <li key={i}>{b}</li>
                       ))}
@@ -194,10 +241,15 @@ export default function Industries() {
                   </div>
 
                   <div className="mt-auto">
-                    <div className="text-xs font-semibold mb-1">Technologies</div>
+                    <div className="text-xs font-semibold mb-1 text-gray-800">
+                      Technologies
+                    </div>
                     <div className="flex flex-wrap gap-1.5">
                       {ind.technologies.map((t, i) => (
-                        <span key={i} className="px-2 py-0.5 bg-white/5 rounded text-xs">
+                        <span
+                          key={i}
+                          className="px-2 py-0.5 bg-black/5 rounded text-xs text-gray-700"
+                        >
                           {t}
                         </span>
                       ))}
