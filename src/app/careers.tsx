@@ -153,7 +153,7 @@ export default function CareersPage() {
                           href="mailto:contact@zivstack.in"
                           className="inline-block px-4 sm:px-6 py-2.5 sm:py-3 bg-blue-500/20 border border-blue-500/40 rounded-lg text-blue-300 hover:text-blue-200 hover:bg-blue-500/30 hover:border-blue-500/60 transition-all duration-300 text-sm sm:text-base font-medium"
                         >
-                          contact@zivstack.in
+                          careers@zivstack.in
                         </a>
                       </div>
                     </div>
