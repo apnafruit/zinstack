@@ -15,6 +15,7 @@ import Work from '@/app/work';
 import Blog from '@/app/blog';
 import Contact from '@/app/contact';
 import ServicesPage from '@/app/services';
+import CareersPage from '@/app/careers';
 import { useEffect, useState } from 'react';
 
 export default function App() {
@@ -77,6 +78,8 @@ export default function App() {
           <Contact />
         ) : route === '/services' ? (
           <ServicesPage />
+        ) : route === '/careers' ? (
+          <CareersPage />
         ) : (
           <>
             <Hero />
